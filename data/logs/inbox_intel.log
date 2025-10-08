@@ -1,0 +1,91 @@
+2025-10-07 22:06:56 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:06:56 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:06:56 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:06:56 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:06:56 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:06:56 - inbox_intel - ERROR - Failed to obtain access token: Network error
+2025-10-07 22:06:56 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:06:56 - inbox_intel - ERROR - Failed to obtain access token: 401 Unauthorized
+2025-10-07 22:06:56 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:06:56 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:06:56 - inbox_intel - ERROR - API request failed: GET https://open-api.guesty.com/v1/nonexistent - 404 Not Found
+2025-10-07 22:06:56 - inbox_intel - ERROR - API request failed: GET https://open-api.guesty.com/v1/listings - Connection timeout
+2025-10-07 22:06:56 - inbox_intel - INFO - Testing Guesty API connection by fetching listings
+2025-10-07 22:07:23 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:07:23 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:07:23 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:07:23 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:07:23 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:07:23 - inbox_intel - ERROR - Failed to obtain access token: Network error
+2025-10-07 22:07:23 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:07:23 - inbox_intel - ERROR - Failed to obtain access token: 401 Unauthorized
+2025-10-07 22:07:23 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:07:23 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:07:23 - inbox_intel - ERROR - API request failed: GET https://open-api.guesty.com/v1/nonexistent - 404 Not Found
+2025-10-07 22:07:23 - inbox_intel - ERROR - API request failed: GET https://open-api.guesty.com/v1/listings - Connection timeout
+2025-10-07 22:07:23 - inbox_intel - INFO - Testing Guesty API connection by fetching listings
+2025-10-07 22:08:42 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:08:42 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:08:42 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:08:42 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:08:42 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:08:42 - inbox_intel - ERROR - Failed to obtain access token: Network error
+2025-10-07 22:08:42 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:08:42 - inbox_intel - ERROR - Failed to obtain access token: 401 Unauthorized
+2025-10-07 22:08:42 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:08:42 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:08:42 - inbox_intel - ERROR - API request failed: GET https://open-api.guesty.com/v1/nonexistent - 404 Not Found
+2025-10-07 22:08:42 - inbox_intel - ERROR - API request failed: GET https://open-api.guesty.com/v1/listings - Connection timeout
+2025-10-07 22:08:42 - inbox_intel - INFO - Testing Guesty API connection by fetching listings
+2025-10-07 22:08:46 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:08:46 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:08:46 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:08:46 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:08:46 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:08:46 - inbox_intel - ERROR - Failed to obtain access token: Network error
+2025-10-07 22:08:46 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:08:46 - inbox_intel - ERROR - Failed to obtain access token: 401 Unauthorized
+2025-10-07 22:08:46 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:08:46 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:08:46 - inbox_intel - ERROR - API request failed: GET https://open-api.guesty.com/v1/nonexistent - 404 Not Found
+2025-10-07 22:08:46 - inbox_intel - ERROR - API request failed: GET https://open-api.guesty.com/v1/listings - Connection timeout
+2025-10-07 22:08:46 - inbox_intel - INFO - Testing Guesty API connection by fetching listings
+2025-10-07 22:09:49 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:09:49 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:09:49 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:09:49 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:09:49 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:09:49 - inbox_intel - ERROR - Failed to obtain access token: Network error
+2025-10-07 22:09:49 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:09:49 - inbox_intel - ERROR - Failed to obtain access token: 401 Unauthorized
+2025-10-07 22:09:49 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:09:49 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:09:49 - inbox_intel - ERROR - API request failed: GET https://open-api.guesty.com/v1/nonexistent - 404 Not Found
+2025-10-07 22:09:49 - inbox_intel - ERROR - API request failed: GET https://open-api.guesty.com/v1/listings - Connection timeout
+2025-10-07 22:09:49 - inbox_intel - INFO - Testing Guesty API connection by fetching listings
+2025-10-07 22:10:00 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:10:00 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:10:00 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:10:00 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:10:00 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:10:00 - inbox_intel - ERROR - Failed to obtain access token: Network error
+2025-10-07 22:10:00 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:10:00 - inbox_intel - ERROR - Failed to obtain access token: 401 Unauthorized
+2025-10-07 22:10:00 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:10:00 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:10:00 - inbox_intel - ERROR - API request failed: GET https://open-api.guesty.com/v1/nonexistent - 404 Not Found
+2025-10-07 22:10:00 - inbox_intel - ERROR - API request failed: GET https://open-api.guesty.com/v1/listings - Connection timeout
+2025-10-07 22:10:00 - inbox_intel - INFO - Testing Guesty API connection by fetching listings
+2025-10-07 22:10:14 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:10:14 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:10:14 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:10:14 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:10:14 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:10:14 - inbox_intel - ERROR - Failed to obtain access token: Network error
+2025-10-07 22:10:14 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:10:14 - inbox_intel - ERROR - Failed to obtain access token: 401 Unauthorized
+2025-10-07 22:10:14 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:10:14 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:10:14 - inbox_intel - ERROR - API request failed: GET https://open-api.guesty.com/v1/nonexistent - 404 Not Found
+2025-10-07 22:10:14 - inbox_intel - ERROR - API request failed: GET https://open-api.guesty.com/v1/listings - Connection timeout
+2025-10-07 22:10:14 - inbox_intel - INFO - Testing Guesty API connection by fetching listings
