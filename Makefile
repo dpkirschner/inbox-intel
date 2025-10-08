@@ -26,6 +26,7 @@ lint:
 	$(RUFF) check src tests
 
 format:
+	$(RUFF) check --fix src tests
 	$(RUFF) format src tests
 
 test:
