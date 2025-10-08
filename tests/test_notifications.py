@@ -5,7 +5,7 @@ from unittest.mock import Mock, patch
 import pytest
 import requests
 
-from src.notifications import PushoverError, send_pushover_alert
+from src.notifications import PushoverError, render_template, send_pushover_alert
 
 
 @pytest.fixture
@@ -114,3 +114,61 @@ class TestSendPushoverAlert:
 
             with pytest.raises(PushoverError, match="Failed to send notification"):
                 send_pushover_alert("Title", "Message")
+
+
+class TestRenderTemplate:
+    """Tests for render_template function."""
+
+    def test_render_early_checkin_template(self):
+        """Test rendering early check-in template."""
+        result = render_template(
+            "EARLY_CHECKIN",
+            guest_name="John Doe",
+            reservation_id="res_123",
+            confidence="95%",
+            summary="Guest wants to check in at 10am",
+            message_text="Can we check in early at 10am?",
+        )
+
+        assert "John Doe" in result
+        assert "res_123" in result
+        assert "95%" in result
+        assert "Guest wants to check in at 10am" in result
+        assert "Can we check in early at 10am?" in result
+
+    def test_render_maintenance_issue_template(self):
+        """Test rendering maintenance issue template."""
+        result = render_template(
+            "MAINTENANCE_ISSUE",
+            guest_name="Jane Smith",
+            reservation_id="res_456",
+            confidence="98%",
+            summary="WiFi not working",
+            message_text="The WiFi is down in our unit",
+        )
+
+        assert "Jane Smith" in result
+        assert "res_456" in result
+        assert "98%" in result
+        assert "WiFi not working" in result
+        assert "The WiFi is down in our unit" in result
+
+    def test_render_template_with_defaults(self):
+        """Test rendering template with default values."""
+        result = render_template("EARLY_CHECKIN")
+
+        assert "Unknown" in result
+        assert "N/A" in result
+
+    def test_render_template_partial_context(self):
+        """Test rendering template with partial context."""
+        result = render_template("SPECIAL_REQUEST", guest_name="Alice", summary="Extra towels")
+
+        assert "Alice" in result
+        assert "Extra towels" in result
+        assert "N/A" in result
+
+    def test_render_template_not_found(self):
+        """Test rendering non-existent template raises error."""
+        with pytest.raises(FileNotFoundError, match="Template not found"):
+            render_template("INVALID_CATEGORY")

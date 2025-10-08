@@ -6,7 +6,7 @@ from src.config import config
 from src.database import Message, get_engine, get_session
 from src.llm_classifier import ClassificationResult, classify_message
 from src.logger import get_logger
-from src.notifications import PushoverError, send_pushover_alert
+from src.notifications import PushoverError, render_template, send_pushover_alert
 
 logger = get_logger(__name__)
 
@@ -74,19 +74,19 @@ def _should_send_alert(category: str, confidence: float) -> bool:
 
 def _send_classification_alert(message: Message, result: ClassificationResult) -> None:
     try:
-        guest_info = f"Guest: {message.guest_name}" if message.guest_name else "Guest: Unknown"
         title = f"🔔 {result.category.replace('_', ' ').title()}"
 
-        alert_message = (
-            f"{guest_info}\n"
-            f"Category: {result.category}\n"
-            f"Confidence: {result.confidence:.0%}\n\n"
-            f"Summary: {result.summary}\n\n"
-            f"Reservation ID: {message.reservation_id or 'N/A'}"
+        alert_message = render_template(
+            result.category,
+            guest_name=message.guest_name or "Unknown",
+            reservation_id=message.reservation_id or "N/A",
+            confidence=f"{result.confidence:.0%}",
+            summary=result.summary,
+            message_text=message.message_text[:200],
         )
 
         send_pushover_alert(title, alert_message, priority=0)
         logger.info(f"Alert sent for message {message.guesty_message_id}")
 
-    except PushoverError as e:
+    except (PushoverError, FileNotFoundError) as e:
         logger.warning(f"Failed to send alert for {message.guesty_message_id}: {e}")
