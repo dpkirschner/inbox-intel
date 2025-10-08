@@ -4,8 +4,9 @@ from sqlalchemy import select
 
 from src.config import config
 from src.database import Message, get_engine, get_session
-from src.llm_classifier import classify_message
+from src.llm_classifier import ClassificationResult, classify_message
 from src.logger import get_logger
+from src.notifications import PushoverError, send_pushover_alert
 
 logger = get_logger(__name__)
 
@@ -42,6 +43,9 @@ def process_unclassified_messages() -> int:
                     f"{result.category} (confidence: {result.confidence:.2f})"
                 )
 
+                if _should_send_alert(result.category, result.confidence):
+                    _send_classification_alert(message, result)
+
             except Exception as e:
                 logger.error(
                     f"Failed to classify message {message.guesty_message_id}: {e}"
@@ -59,3 +63,30 @@ def process_unclassified_messages() -> int:
 
     finally:
         session.close()
+
+
+def _should_send_alert(category: str, confidence: float) -> bool:
+    return (
+        category in config.ALERT_CATEGORIES
+        and confidence >= config.MIN_CONFIDENCE_THRESHOLD
+    )
+
+
+def _send_classification_alert(message: Message, result: ClassificationResult) -> None:
+    try:
+        guest_info = f"Guest: {message.guest_name}" if message.guest_name else "Guest: Unknown"
+        title = f"🔔 {result.category.replace('_', ' ').title()}"
+
+        alert_message = (
+            f"{guest_info}\n"
+            f"Category: {result.category}\n"
+            f"Confidence: {result.confidence:.0%}\n\n"
+            f"Summary: {result.summary}\n\n"
+            f"Reservation ID: {message.reservation_id or 'N/A'}"
+        )
+
+        send_pushover_alert(title, alert_message, priority=0)
+        logger.info(f"Alert sent for message {message.guesty_message_id}")
+
+    except PushoverError as e:
+        logger.warning(f"Failed to send alert for {message.guesty_message_id}: {e}")
