@@ -19,6 +19,7 @@ dev = [
     "mypy>=1.13.0",
     "pytest==8.4.2",
     "types-requests>=2.32.0",
+    "httpx>=0.28.1",
 ]
 
 [build-system]
@@ -45,7 +46,9 @@ select = [
     "C4",     # flake8-comprehensions
     "SIM",    # flake8-simplify
 ]
-ignore = []
+ignore = [
+    "B008",   # FastAPI dependency injection pattern
+]
 
 [tool.ruff.format]
 quote-style = "double"

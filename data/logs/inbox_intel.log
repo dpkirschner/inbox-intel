@@ -89,3 +89,1145 @@
 2025-10-07 22:10:14 - inbox_intel - ERROR - API request failed: GET https://open-api.guesty.com/v1/nonexistent - 404 Not Found
 2025-10-07 22:10:14 - inbox_intel - ERROR - API request failed: GET https://open-api.guesty.com/v1/listings - Connection timeout
 2025-10-07 22:10:14 - inbox_intel - INFO - Testing Guesty API connection by fetching listings
+2025-10-07 22:13:03 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:13:03 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:13:03 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:13:03 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:13:03 - inbox_intel - INFO - Received webhook: reservation.updated
+2025-10-07 22:13:03 - inbox_intel - WARNING - Unsupported event type: reservation.updated
+2025-10-07 22:13:03 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:13:03 - inbox_intel - ERROR - Message missing '_id' field
+2025-10-07 22:13:03 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:13:03 - inbox_intel - WARNING - Message msg_abc123 has empty body
+2025-10-07 22:13:03 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:13:03 - inbox_intel - INFO - Received webhook: reservation.messageSent
+2025-10-07 22:13:03 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_sent_001',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:13:03 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:13:03 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:13:03 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:13:03 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:13:03 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:13:03 - inbox_intel - ERROR - Failed to parse timestamp: Invalid isoformat string: 'invalid-timestamp'
+2025-10-07 22:13:03 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:13:03 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:13:03 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:13:20 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:13:20 - inbox_intel - INFO - Database initialized at sqlite:///:memory:
+2025-10-07 22:13:20 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:13:20 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:13:20 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:14:36 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:14:36 - inbox_intel - INFO - Database initialized at sqlite:///data/inbox_intel.db
+2025-10-07 22:14:36 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:14:36 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:14:37 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:14:49 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:14:49 - inbox_intel - INFO - Database initialized at sqlite:///data/inbox_intel.db
+2025-10-07 22:14:49 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:14:49 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:14:49 - inbox_intel - INFO - Database initialized at sqlite:///data/inbox_intel.db
+2025-10-07 22:14:49 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:14:49 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:14:49 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:14:49 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:14:49 - inbox_intel - INFO - Database initialized at sqlite:///data/inbox_intel.db
+2025-10-07 22:14:49 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:14:49 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:14:49 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:14:49 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:14:49 - inbox_intel - INFO - Database initialized at sqlite:///data/inbox_intel.db
+2025-10-07 22:14:49 - inbox_intel - INFO - Received webhook: reservation.updated
+2025-10-07 22:14:49 - inbox_intel - WARNING - Unsupported event type: reservation.updated
+2025-10-07 22:14:49 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:14:49 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:14:49 - inbox_intel - INFO - Database initialized at sqlite:///data/inbox_intel.db
+2025-10-07 22:14:49 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:14:49 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:14:49 - inbox_intel - INFO - Database initialized at sqlite:///data/inbox_intel.db
+2025-10-07 22:14:49 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:14:49 - inbox_intel - ERROR - Message missing '_id' field
+2025-10-07 22:14:49 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:14:49 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:14:49 - inbox_intel - INFO - Database initialized at sqlite:///data/inbox_intel.db
+2025-10-07 22:14:49 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:14:49 - inbox_intel - WARNING - Message msg_abc123 has empty body
+2025-10-07 22:14:49 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:14:49 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:14:49 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:14:49 - inbox_intel - INFO - Database initialized at sqlite:///data/inbox_intel.db
+2025-10-07 22:14:49 - inbox_intel - INFO - Received webhook: reservation.messageSent
+2025-10-07 22:14:49 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_sent_001',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:14:49 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:14:49 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:14:49 - inbox_intel - INFO - Database initialized at sqlite:///data/inbox_intel.db
+2025-10-07 22:14:49 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:14:49 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:14:49 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:14:49 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:14:49 - inbox_intel - INFO - Database initialized at sqlite:///data/inbox_intel.db
+2025-10-07 22:14:49 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:14:49 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:14:49 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:14:49 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:14:49 - inbox_intel - INFO - Database initialized at sqlite:///data/inbox_intel.db
+2025-10-07 22:14:49 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:14:49 - inbox_intel - ERROR - Failed to parse timestamp: Invalid isoformat string: 'invalid-timestamp'
+2025-10-07 22:14:49 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:14:49 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:14:49 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:14:49 - inbox_intel - INFO - Database initialized at sqlite:///data/inbox_intel.db
+2025-10-07 22:14:49 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:14:49 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:14:49 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:15:10 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:15:10 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:15:10 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:15:10 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:15:10 - inbox_intel - INFO - Received webhook: reservation.updated
+2025-10-07 22:15:10 - inbox_intel - WARNING - Unsupported event type: reservation.updated
+2025-10-07 22:15:10 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:15:10 - inbox_intel - ERROR - Message missing '_id' field
+2025-10-07 22:15:10 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:15:10 - inbox_intel - WARNING - Message msg_abc123 has empty body
+2025-10-07 22:15:10 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:15:10 - inbox_intel - INFO - Received webhook: reservation.messageSent
+2025-10-07 22:15:10 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_sent_001',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:15:10 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:15:10 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:15:10 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:15:10 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:15:10 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:15:10 - inbox_intel - ERROR - Failed to parse timestamp: Invalid isoformat string: 'invalid-timestamp'
+2025-10-07 22:15:10 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:15:10 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:15:10 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:15:40 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:15:40 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:16:53 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:16:53 - inbox_intel - INFO - Database initialized at sqlite:///data/inbox_intel.db
+2025-10-07 22:16:53 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:16:53 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:16:53 - inbox_intel - INFO - Database initialized at sqlite:///data/inbox_intel.db
+2025-10-07 22:16:53 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:16:53 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:16:53 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:16:53 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:16:53 - inbox_intel - INFO - Database initialized at sqlite:///data/inbox_intel.db
+2025-10-07 22:16:53 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:16:53 - inbox_intel - INFO - Duplicate message skipped: msg_abc123
+2025-10-07 22:16:53 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:16:53 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:16:53 - inbox_intel - INFO - Database initialized at sqlite:///data/inbox_intel.db
+2025-10-07 22:16:53 - inbox_intel - INFO - Received webhook: reservation.updated
+2025-10-07 22:16:53 - inbox_intel - WARNING - Unsupported event type: reservation.updated
+2025-10-07 22:16:53 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:16:53 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:16:53 - inbox_intel - INFO - Database initialized at sqlite:///data/inbox_intel.db
+2025-10-07 22:16:53 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:16:53 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:16:53 - inbox_intel - INFO - Database initialized at sqlite:///data/inbox_intel.db
+2025-10-07 22:16:53 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:16:53 - inbox_intel - ERROR - Message missing '_id' field
+2025-10-07 22:16:53 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:16:53 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:16:53 - inbox_intel - INFO - Database initialized at sqlite:///data/inbox_intel.db
+2025-10-07 22:16:53 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:16:53 - inbox_intel - WARNING - Message msg_abc123 has empty body
+2025-10-07 22:16:53 - inbox_intel - INFO - Duplicate message skipped: msg_abc123
+2025-10-07 22:16:53 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:16:53 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:16:53 - inbox_intel - INFO - Database initialized at sqlite:///data/inbox_intel.db
+2025-10-07 22:16:53 - inbox_intel - INFO - Received webhook: reservation.messageSent
+2025-10-07 22:16:53 - inbox_intel - INFO - Saved new message: msg_sent_001
+2025-10-07 22:16:53 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:16:53 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:16:53 - inbox_intel - INFO - Database initialized at sqlite:///data/inbox_intel.db
+2025-10-07 22:16:53 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:16:53 - inbox_intel - INFO - Duplicate message skipped: msg_abc123
+2025-10-07 22:16:53 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:16:53 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:16:53 - inbox_intel - INFO - Database initialized at sqlite:///data/inbox_intel.db
+2025-10-07 22:16:53 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:16:53 - inbox_intel - INFO - Duplicate message skipped: msg_abc123
+2025-10-07 22:16:53 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:16:53 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:16:53 - inbox_intel - INFO - Database initialized at sqlite:///data/inbox_intel.db
+2025-10-07 22:16:53 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:16:53 - inbox_intel - ERROR - Failed to parse timestamp: Invalid isoformat string: 'invalid-timestamp'
+2025-10-07 22:16:53 - inbox_intel - INFO - Duplicate message skipped: msg_abc123
+2025-10-07 22:16:53 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:16:53 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:16:53 - inbox_intel - INFO - Database initialized at sqlite:///data/inbox_intel.db
+2025-10-07 22:16:53 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:16:53 - inbox_intel - INFO - Duplicate message skipped: msg_abc123
+2025-10-07 22:16:53 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:17:15 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:17:15 - inbox_intel - INFO - Database initialized at sqlite:///data/inbox_intel.db
+2025-10-07 22:17:15 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:17:15 - inbox_intel - INFO - Duplicate message skipped: msg_abc123
+2025-10-07 22:17:15 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:17:32 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:17:32 - inbox_intel - INFO - Database initialized at sqlite:///:memory:
+2025-10-07 22:17:32 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:17:32 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:17:32 - inbox_intel - INFO - Database initialized at sqlite:///:memory:
+2025-10-07 22:17:32 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:17:32 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:17:33 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:17:33 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:17:33 - inbox_intel - INFO - Database initialized at sqlite:///:memory:
+2025-10-07 22:17:33 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:17:33 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:17:33 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:17:33 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:17:33 - inbox_intel - INFO - Database initialized at sqlite:///:memory:
+2025-10-07 22:17:33 - inbox_intel - INFO - Received webhook: reservation.updated
+2025-10-07 22:17:33 - inbox_intel - WARNING - Unsupported event type: reservation.updated
+2025-10-07 22:17:33 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:17:33 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:17:33 - inbox_intel - INFO - Database initialized at sqlite:///:memory:
+2025-10-07 22:17:33 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:17:33 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:17:33 - inbox_intel - INFO - Database initialized at sqlite:///:memory:
+2025-10-07 22:17:33 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:17:33 - inbox_intel - ERROR - Message missing '_id' field
+2025-10-07 22:17:33 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:17:33 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:17:33 - inbox_intel - INFO - Database initialized at sqlite:///:memory:
+2025-10-07 22:17:33 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:17:33 - inbox_intel - WARNING - Message msg_abc123 has empty body
+2025-10-07 22:17:33 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:17:34 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:17:34 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:17:34 - inbox_intel - INFO - Database initialized at sqlite:///:memory:
+2025-10-07 22:17:34 - inbox_intel - INFO - Received webhook: reservation.messageSent
+2025-10-07 22:17:34 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_sent_001',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:17:34 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:17:34 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:17:34 - inbox_intel - INFO - Database initialized at sqlite:///:memory:
+2025-10-07 22:17:34 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:17:34 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:17:35 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:17:35 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:17:35 - inbox_intel - INFO - Database initialized at sqlite:///:memory:
+2025-10-07 22:17:35 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:17:35 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:17:35 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:17:35 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:17:35 - inbox_intel - INFO - Database initialized at sqlite:///:memory:
+2025-10-07 22:17:35 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:17:35 - inbox_intel - ERROR - Failed to parse timestamp: Invalid isoformat string: 'invalid-timestamp'
+2025-10-07 22:17:35 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:17:36 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:17:36 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:17:36 - inbox_intel - INFO - Database initialized at sqlite:///:memory:
+2025-10-07 22:17:36 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:17:36 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:17:36 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:17:53 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:17:53 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:17:53 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:17:53 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:17:53 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:17:53 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:17:53 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:17:53 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:17:53 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:17:53 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:17:53 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:17:53 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:17:53 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:17:53 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:17:53 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:17:53 - inbox_intel - INFO - Received webhook: reservation.updated
+2025-10-07 22:17:53 - inbox_intel - WARNING - Unsupported event type: reservation.updated
+2025-10-07 22:17:53 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:17:53 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:17:53 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:17:53 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:17:53 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:17:53 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:17:53 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:17:53 - inbox_intel - ERROR - Message missing '_id' field
+2025-10-07 22:17:53 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:17:53 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:17:53 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:17:53 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:17:53 - inbox_intel - WARNING - Message msg_abc123 has empty body
+2025-10-07 22:17:53 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:17:53 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:17:53 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:17:53 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:17:53 - inbox_intel - INFO - Received webhook: reservation.messageSent
+2025-10-07 22:17:53 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_sent_001',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:17:53 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:17:53 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:17:53 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:17:53 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:17:53 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:17:53 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:17:53 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:17:53 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:17:53 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:17:53 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:17:53 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:17:53 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:17:53 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:17:53 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:17:53 - inbox_intel - ERROR - Failed to parse timestamp: Invalid isoformat string: 'invalid-timestamp'
+2025-10-07 22:17:53 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:17:53 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:17:53 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:17:53 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:17:53 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:17:53 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:17:53 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:18:00 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:18:00 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:18:00 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:18:00 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:18:00 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:18:22 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:18:22 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:18:22 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:18:22 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:18:22 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:18:46 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:18:46 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:18:46 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:18:46 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:18:46 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:18:46 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:18:46 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:18:46 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:18:46 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:18:46 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:18:46 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:18:46 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:18:46 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:18:46 - inbox_intel - INFO - Duplicate message skipped: msg_abc123
+2025-10-07 22:18:46 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:18:46 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:18:46 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:18:46 - inbox_intel - INFO - Received webhook: reservation.updated
+2025-10-07 22:18:46 - inbox_intel - WARNING - Unsupported event type: reservation.updated
+2025-10-07 22:18:46 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:18:46 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:18:46 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:18:46 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:18:46 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:18:46 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:18:46 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:18:46 - inbox_intel - ERROR - Message missing '_id' field
+2025-10-07 22:18:46 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:18:46 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:18:46 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:18:46 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:18:46 - inbox_intel - WARNING - Message msg_abc123 has empty body
+2025-10-07 22:18:46 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:18:46 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:18:46 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:18:46 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:18:46 - inbox_intel - INFO - Received webhook: reservation.messageSent
+2025-10-07 22:18:46 - inbox_intel - INFO - Saved new message: msg_sent_001
+2025-10-07 22:18:46 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:18:46 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:18:46 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:18:46 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:18:46 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:18:46 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:18:46 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:18:46 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:18:46 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:18:46 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:18:46 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:18:46 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:18:46 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:18:46 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:18:46 - inbox_intel - ERROR - Failed to parse timestamp: Invalid isoformat string: 'invalid-timestamp'
+2025-10-07 22:18:46 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:18:46 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:18:46 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:18:46 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:18:46 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:18:46 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:18:46 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:19:47 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:19:47 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:19:47 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:19:47 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:19:47 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:19:47 - inbox_intel - ERROR - Failed to obtain access token: Network error
+2025-10-07 22:19:47 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:19:47 - inbox_intel - ERROR - Failed to obtain access token: 401 Unauthorized
+2025-10-07 22:19:47 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:19:47 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:19:47 - inbox_intel - ERROR - API request failed: GET https://open-api.guesty.com/v1/nonexistent - 404 Not Found
+2025-10-07 22:19:47 - inbox_intel - ERROR - API request failed: GET https://open-api.guesty.com/v1/listings - Connection timeout
+2025-10-07 22:19:47 - inbox_intel - INFO - Testing Guesty API connection by fetching listings
+2025-10-07 22:19:47 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:19:47 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:19:47 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:19:47 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:19:47 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:19:47 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:19:47 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:19:47 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:19:47 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:19:47 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:19:47 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:19:47 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:19:47 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:19:47 - inbox_intel - INFO - Duplicate message skipped: msg_abc123
+2025-10-07 22:19:47 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:19:47 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:19:47 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:19:47 - inbox_intel - INFO - Received webhook: reservation.updated
+2025-10-07 22:19:47 - inbox_intel - WARNING - Unsupported event type: reservation.updated
+2025-10-07 22:19:47 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:19:47 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:19:47 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:19:47 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:19:47 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:19:47 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:19:47 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:19:47 - inbox_intel - ERROR - Message missing '_id' field
+2025-10-07 22:19:47 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:19:47 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:19:47 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:19:47 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:19:47 - inbox_intel - WARNING - Message msg_abc123 has empty body
+2025-10-07 22:19:47 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:19:47 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:19:47 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:19:47 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:19:47 - inbox_intel - INFO - Received webhook: reservation.messageSent
+2025-10-07 22:19:47 - inbox_intel - INFO - Saved new message: msg_sent_001
+2025-10-07 22:19:47 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:19:47 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:19:47 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:19:47 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:19:47 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:19:47 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:19:47 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:19:47 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:19:47 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:19:47 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:19:47 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:19:47 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:19:47 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:19:47 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:19:47 - inbox_intel - ERROR - Failed to parse timestamp: Invalid isoformat string: 'invalid-timestamp'
+2025-10-07 22:19:47 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:19:47 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:19:47 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:19:47 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:19:47 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:19:47 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:19:47 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:21:06 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:21:06 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:21:06 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:21:06 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:21:06 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:21:06 - inbox_intel - ERROR - Failed to obtain access token: Network error
+2025-10-07 22:21:06 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:21:06 - inbox_intel - ERROR - Failed to obtain access token: 401 Unauthorized
+2025-10-07 22:21:06 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:21:06 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:21:06 - inbox_intel - ERROR - API request failed: GET https://open-api.guesty.com/v1/nonexistent - 404 Not Found
+2025-10-07 22:21:06 - inbox_intel - ERROR - API request failed: GET https://open-api.guesty.com/v1/listings - Connection timeout
+2025-10-07 22:21:06 - inbox_intel - INFO - Testing Guesty API connection by fetching listings
+2025-10-07 22:21:06 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:21:06 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:21:06 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:21:06 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:21:06 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:21:06 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:21:06 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:21:06 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:21:06 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:21:06 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:21:06 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:21:06 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:21:06 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:21:06 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:21:06 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:21:06 - inbox_intel - INFO - Received webhook: reservation.updated
+2025-10-07 22:21:06 - inbox_intel - WARNING - Unsupported event type: reservation.updated
+2025-10-07 22:21:06 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:21:06 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:21:06 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:21:06 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:21:06 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:21:06 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:21:06 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:21:06 - inbox_intel - ERROR - Message missing '_id' field
+2025-10-07 22:21:06 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:21:06 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:21:06 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:21:06 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:21:06 - inbox_intel - WARNING - Message msg_abc123 has empty body
+2025-10-07 22:21:06 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:21:06 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:21:06 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:21:06 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:21:06 - inbox_intel - INFO - Received webhook: reservation.messageSent
+2025-10-07 22:21:06 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_sent_001',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:21:06 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:21:06 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:21:06 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:21:06 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:21:06 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:21:06 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:21:06 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:21:06 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:21:06 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:21:06 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:21:06 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:21:06 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:21:06 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:21:06 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:21:06 - inbox_intel - ERROR - Failed to parse timestamp: Invalid isoformat string: 'invalid-timestamp'
+2025-10-07 22:21:06 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:21:06 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:21:06 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:21:06 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:21:06 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:21:06 - inbox_intel - ERROR - Failed to save message: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.guesty_message_id = ?]
+[parameters: ('msg_abc123',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:21:06 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:21:43 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:21:43 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:21:43 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:21:43 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:21:43 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:21:56 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:21:56 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:21:56 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:21:56 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:21:56 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:21:56 - inbox_intel - ERROR - Failed to obtain access token: Network error
+2025-10-07 22:21:56 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:21:56 - inbox_intel - ERROR - Failed to obtain access token: 401 Unauthorized
+2025-10-07 22:21:56 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:21:56 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:21:56 - inbox_intel - ERROR - API request failed: GET https://open-api.guesty.com/v1/nonexistent - 404 Not Found
+2025-10-07 22:21:56 - inbox_intel - ERROR - API request failed: GET https://open-api.guesty.com/v1/listings - Connection timeout
+2025-10-07 22:21:56 - inbox_intel - INFO - Testing Guesty API connection by fetching listings
+2025-10-07 22:21:56 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:21:56 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:21:56 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:21:56 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:21:56 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:21:56 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:21:56 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:21:56 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:21:56 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:21:56 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:21:56 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:21:56 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:21:56 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:21:56 - inbox_intel - INFO - Duplicate message skipped: msg_abc123
+2025-10-07 22:21:56 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:21:56 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:21:56 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:21:56 - inbox_intel - INFO - Received webhook: reservation.updated
+2025-10-07 22:21:56 - inbox_intel - WARNING - Unsupported event type: reservation.updated
+2025-10-07 22:21:56 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:21:56 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:21:56 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:21:56 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:21:56 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:21:56 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:21:56 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:21:56 - inbox_intel - ERROR - Message missing '_id' field
+2025-10-07 22:21:56 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:21:56 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:21:56 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:21:56 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:21:56 - inbox_intel - WARNING - Message msg_abc123 has empty body
+2025-10-07 22:21:56 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:21:56 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:21:56 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:21:56 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:21:56 - inbox_intel - INFO - Received webhook: reservation.messageSent
+2025-10-07 22:21:56 - inbox_intel - INFO - Saved new message: msg_sent_001
+2025-10-07 22:21:56 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:21:56 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:21:56 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:21:56 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:21:56 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:21:56 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:21:56 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:21:56 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:21:56 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:21:56 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:21:56 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:21:56 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:21:56 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:21:56 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:21:56 - inbox_intel - ERROR - Failed to parse timestamp: Invalid isoformat string: 'invalid-timestamp'
+2025-10-07 22:21:56 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:21:56 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:21:56 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:21:56 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:21:56 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:21:56 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:21:56 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:06 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:23:06 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:23:06 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:23:06 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:23:06 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:23:06 - inbox_intel - ERROR - Failed to obtain access token: Network error
+2025-10-07 22:23:06 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:23:06 - inbox_intel - ERROR - Failed to obtain access token: 401 Unauthorized
+2025-10-07 22:23:06 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:23:06 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:23:06 - inbox_intel - ERROR - API request failed: GET https://open-api.guesty.com/v1/nonexistent - 404 Not Found
+2025-10-07 22:23:06 - inbox_intel - ERROR - API request failed: GET https://open-api.guesty.com/v1/listings - Connection timeout
+2025-10-07 22:23:06 - inbox_intel - INFO - Testing Guesty API connection by fetching listings
+2025-10-07 22:23:06 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:06 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:06 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:06 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:06 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:06 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:23:06 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:23:06 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:06 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:06 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:06 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:23:06 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:23:06 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:23:06 - inbox_intel - INFO - Duplicate message skipped: msg_abc123
+2025-10-07 22:23:06 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:06 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:06 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:06 - inbox_intel - INFO - Received webhook: reservation.updated
+2025-10-07 22:23:06 - inbox_intel - WARNING - Unsupported event type: reservation.updated
+2025-10-07 22:23:06 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:06 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:06 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:06 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:06 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:06 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:06 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:23:06 - inbox_intel - ERROR - Message missing '_id' field
+2025-10-07 22:23:06 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:06 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:06 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:06 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:23:06 - inbox_intel - WARNING - Message msg_abc123 has empty body
+2025-10-07 22:23:06 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:23:06 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:06 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:06 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:06 - inbox_intel - INFO - Received webhook: reservation.messageSent
+2025-10-07 22:23:06 - inbox_intel - INFO - Saved new message: msg_sent_001
+2025-10-07 22:23:06 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:06 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:06 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:06 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:23:06 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:23:06 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:06 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:06 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:06 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:23:06 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:23:06 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:06 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:06 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:06 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:23:06 - inbox_intel - ERROR - Failed to parse timestamp: Invalid isoformat string: 'invalid-timestamp'
+2025-10-07 22:23:06 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:23:06 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:06 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:06 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:06 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:23:06 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:23:06 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:31 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:23:31 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:23:31 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:23:31 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:23:31 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:23:31 - inbox_intel - ERROR - Failed to obtain access token: Network error
+2025-10-07 22:23:31 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:23:31 - inbox_intel - ERROR - Failed to obtain access token: 401 Unauthorized
+2025-10-07 22:23:31 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:23:31 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:23:31 - inbox_intel - ERROR - API request failed: GET https://open-api.guesty.com/v1/nonexistent - 404 Not Found
+2025-10-07 22:23:31 - inbox_intel - ERROR - API request failed: GET https://open-api.guesty.com/v1/listings - Connection timeout
+2025-10-07 22:23:31 - inbox_intel - INFO - Testing Guesty API connection by fetching listings
+2025-10-07 22:23:32 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:32 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:32 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:32 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:32 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:32 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:23:32 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:23:32 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:32 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:32 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:32 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:23:32 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:23:32 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:23:32 - inbox_intel - INFO - Duplicate message skipped: msg_abc123
+2025-10-07 22:23:32 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:32 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:32 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:32 - inbox_intel - INFO - Received webhook: reservation.updated
+2025-10-07 22:23:32 - inbox_intel - WARNING - Unsupported event type: reservation.updated
+2025-10-07 22:23:32 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:32 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:32 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:32 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:32 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:32 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:32 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:23:32 - inbox_intel - ERROR - Message missing '_id' field
+2025-10-07 22:23:32 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:32 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:32 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:32 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:23:32 - inbox_intel - WARNING - Message msg_abc123 has empty body
+2025-10-07 22:23:32 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:23:32 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:32 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:32 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:32 - inbox_intel - INFO - Received webhook: reservation.messageSent
+2025-10-07 22:23:32 - inbox_intel - INFO - Saved new message: msg_sent_001
+2025-10-07 22:23:32 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:32 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:32 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:32 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:23:32 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:23:32 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:32 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:32 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:32 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:23:32 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:23:32 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:32 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:32 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:32 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:23:32 - inbox_intel - ERROR - Failed to parse timestamp: Invalid isoformat string: 'invalid-timestamp'
+2025-10-07 22:23:32 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:23:32 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:32 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:32 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:32 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:23:32 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:23:32 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:45 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:23:45 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:23:45 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:23:45 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:23:45 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:23:45 - inbox_intel - ERROR - Failed to obtain access token: Network error
+2025-10-07 22:23:45 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:23:45 - inbox_intel - ERROR - Failed to obtain access token: 401 Unauthorized
+2025-10-07 22:23:45 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:23:45 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:23:45 - inbox_intel - ERROR - API request failed: GET https://open-api.guesty.com/v1/nonexistent - 404 Not Found
+2025-10-07 22:23:45 - inbox_intel - ERROR - API request failed: GET https://open-api.guesty.com/v1/listings - Connection timeout
+2025-10-07 22:23:45 - inbox_intel - INFO - Testing Guesty API connection by fetching listings
+2025-10-07 22:23:45 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:45 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:45 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:45 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:45 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:45 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:23:45 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:23:45 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:45 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:45 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:45 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:23:45 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:23:45 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:23:45 - inbox_intel - INFO - Duplicate message skipped: msg_abc123
+2025-10-07 22:23:45 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:45 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:45 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:45 - inbox_intel - INFO - Received webhook: reservation.updated
+2025-10-07 22:23:45 - inbox_intel - WARNING - Unsupported event type: reservation.updated
+2025-10-07 22:23:45 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:45 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:45 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:45 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:45 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:45 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:45 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:23:45 - inbox_intel - ERROR - Message missing '_id' field
+2025-10-07 22:23:45 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:45 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:45 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:45 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:23:45 - inbox_intel - WARNING - Message msg_abc123 has empty body
+2025-10-07 22:23:45 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:23:45 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:45 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:45 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:45 - inbox_intel - INFO - Received webhook: reservation.messageSent
+2025-10-07 22:23:45 - inbox_intel - INFO - Saved new message: msg_sent_001
+2025-10-07 22:23:45 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:45 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:45 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:45 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:23:45 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:23:45 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:45 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:45 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:45 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:23:45 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:23:45 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:45 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:45 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:45 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:23:45 - inbox_intel - ERROR - Failed to parse timestamp: Invalid isoformat string: 'invalid-timestamp'
+2025-10-07 22:23:45 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:23:45 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:45 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:45 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:45 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:23:45 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:23:45 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:48 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:23:48 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:23:48 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:23:48 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:23:48 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:23:48 - inbox_intel - ERROR - Failed to obtain access token: Network error
+2025-10-07 22:23:48 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:23:48 - inbox_intel - ERROR - Failed to obtain access token: 401 Unauthorized
+2025-10-07 22:23:48 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-07 22:23:48 - inbox_intel - INFO - Successfully obtained access token
+2025-10-07 22:23:48 - inbox_intel - ERROR - API request failed: GET https://open-api.guesty.com/v1/nonexistent - 404 Not Found
+2025-10-07 22:23:48 - inbox_intel - ERROR - API request failed: GET https://open-api.guesty.com/v1/listings - Connection timeout
+2025-10-07 22:23:48 - inbox_intel - INFO - Testing Guesty API connection by fetching listings
+2025-10-07 22:23:48 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:48 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:48 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:48 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:48 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:48 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:23:48 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:23:48 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:48 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:48 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:48 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:23:48 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:23:48 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:23:48 - inbox_intel - INFO - Duplicate message skipped: msg_abc123
+2025-10-07 22:23:48 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:48 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:48 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:48 - inbox_intel - INFO - Received webhook: reservation.updated
+2025-10-07 22:23:48 - inbox_intel - WARNING - Unsupported event type: reservation.updated
+2025-10-07 22:23:48 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:48 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:48 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:48 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:48 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:48 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:48 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:23:48 - inbox_intel - ERROR - Message missing '_id' field
+2025-10-07 22:23:48 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:48 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:48 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:48 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:23:48 - inbox_intel - WARNING - Message msg_abc123 has empty body
+2025-10-07 22:23:48 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:23:48 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:48 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:48 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:48 - inbox_intel - INFO - Received webhook: reservation.messageSent
+2025-10-07 22:23:48 - inbox_intel - INFO - Saved new message: msg_sent_001
+2025-10-07 22:23:48 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:48 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:48 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:48 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:23:48 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:23:48 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:48 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:48 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:48 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:23:48 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:23:48 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:48 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:48 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:48 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:23:48 - inbox_intel - ERROR - Failed to parse timestamp: Invalid isoformat string: 'invalid-timestamp'
+2025-10-07 22:23:48 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:23:48 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-07 22:23:48 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-07 22:23:48 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-07 22:23:48 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-07 22:23:48 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-07 22:23:48 - inbox_intel - INFO - Shutting down InboxIntel application

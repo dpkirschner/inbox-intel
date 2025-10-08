@@ -74,3 +74,53 @@ def get_session(engine: Engine) -> Session:
         SQLAlchemy Session instance
     """
     return Session(engine)
+
+
+def save_message_from_webhook(
+    session: Session,
+    message_id: str,
+    message_text: str,
+    timestamp: datetime,
+    conversation_id: str | None = None,
+    reservation_id: str | None = None,
+    guest_name: str | None = None,
+) -> Message | None:
+    """
+    Save a message from a Guesty webhook to the database.
+    Prevents duplicates based on guesty_message_id.
+
+    Args:
+        session: SQLAlchemy Session instance
+        message_id: Unique Guesty message ID
+        message_text: The message content
+        timestamp: When the message was created
+        conversation_id: Optional conversation ID
+        reservation_id: Optional reservation ID
+        guest_name: Optional guest name
+
+    Returns:
+        The created Message object, or None if duplicate
+    """
+    from sqlalchemy import select
+
+    stmt = select(Message).where(Message.guesty_message_id == message_id)
+    existing = session.execute(stmt).scalar_one_or_none()
+
+    if existing:
+        return None
+
+    message = Message(
+        guesty_message_id=message_id,
+        conversation_id=conversation_id,
+        reservation_id=reservation_id,
+        guest_name=guest_name,
+        message_text=message_text,
+        timestamp=timestamp,
+        is_processed=False,
+    )
+
+    session.add(message)
+    session.commit()
+    session.refresh(message)
+
+    return message
