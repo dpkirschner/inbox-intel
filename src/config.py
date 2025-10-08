@@ -64,6 +64,9 @@ class Config:
         if not cls.GUESTY_API_SECRET:
             errors.append("GUESTY_API_SECRET is required")
 
+        if not cls.PUSHOVER_TOKEN and not cls.SLACK_WEBHOOK_URL and not cls.EMAIL_FROM:
+            errors.append("At least one notification method must be configured")
+
         return errors
 
 
