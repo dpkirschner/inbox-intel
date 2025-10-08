@@ -3,7 +3,7 @@
 import json
 import os
 from pathlib import Path
-from typing import Literal
+from typing import Any, Literal
 
 import yaml
 from openai import OpenAI
@@ -28,7 +28,7 @@ class ClassificationResult:
         self.confidence = confidence
         self.summary = summary
 
-    def to_dict(self) -> dict:
+    def to_dict(self) -> dict[str, str | float]:
         return {
             "category": self.category,
             "confidence": self.confidence,
@@ -39,8 +39,8 @@ class ClassificationResult:
 def _load_prompt_template() -> str:
     prompts_file = Path(__file__).parent.parent / "config" / "prompts.yml"
     with open(prompts_file) as f:
-        prompts_data = yaml.safe_load(f)
-    return prompts_data["classification"]["system_prompt"]
+        prompts_data: dict[str, Any] = yaml.safe_load(f)
+    return str(prompts_data["classification"]["system_prompt"])
 
 
 _CLASSIFICATION_PROMPT: str | None = None

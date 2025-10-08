@@ -14,6 +14,7 @@ from .config import config
 from .database import get_engine, get_session, init_database, save_message_from_webhook
 from .logger import logger
 from .polling import fetch_and_save_messages
+from .worker import process_unclassified_messages
 
 # Global engine instance
 _engine = None
@@ -73,8 +74,19 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
         name="Poll Guesty API for new messages",
         replace_existing=True,
     )
+    _scheduler.add_job(
+        process_unclassified_messages,
+        trigger="interval",
+        seconds=config.PROCESSING_INTERVAL_SECONDS,
+        id="message_processing",
+        name="Process unclassified messages",
+        replace_existing=True,
+    )
     _scheduler.start()
     logger.info(f"Scheduler started: polling every {config.POLLING_INTERVAL_MINUTES} minutes")
+    logger.info(
+        f"Scheduler started: processing every {config.PROCESSING_INTERVAL_SECONDS} seconds"
+    )
 
     yield
 

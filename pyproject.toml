@@ -21,6 +21,7 @@ dev = [
     "mypy>=1.13.0",
     "pytest==8.4.2",
     "types-requests>=2.32.0",
+    "types-pyyaml>=6.0.0",
     "httpx>=0.28.1",
 ]
 
@@ -79,4 +80,8 @@ strict_equality = true
 
 [[tool.mypy.overrides]]
 module = "apscheduler.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "yaml"
 ignore_missing_imports = true
