@@ -5,6 +5,7 @@ from contextlib import asynccontextmanager
 from datetime import datetime
 from typing import Any
 
+from apscheduler.schedulers.background import BackgroundScheduler
 from fastapi import Depends, FastAPI, HTTPException
 from pydantic import BaseModel, Field
 from sqlalchemy.orm import Session
@@ -12,9 +13,11 @@ from sqlalchemy.orm import Session
 from .config import config
 from .database import get_engine, get_session, init_database, save_message_from_webhook
 from .logger import logger
+from .polling import fetch_and_save_messages
 
 # Global engine instance
 _engine = None
+_scheduler = None
 
 
 class WebhookMessage(BaseModel):
@@ -51,7 +54,7 @@ def get_db() -> Iterator[Session]:
 @asynccontextmanager
 async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     """Application lifespan manager."""
-    global _engine
+    global _engine, _scheduler
     logger.info("Starting InboxIntel application")
     if _engine is None:
         _engine = get_engine(config.DATABASE_URL)
@@ -59,7 +62,25 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
         logger.info(f"Database initialized at {config.DATABASE_URL}")
     else:
         logger.info("Using existing engine (test mode)")
+
+    _scheduler = BackgroundScheduler()
+    _scheduler.add_job(
+        fetch_and_save_messages,
+        trigger="interval",
+        minutes=config.POLLING_INTERVAL_MINUTES,
+        kwargs={"minutes_lookback": config.POLLING_INTERVAL_MINUTES},
+        id="message_polling",
+        name="Poll Guesty API for new messages",
+        replace_existing=True,
+    )
+    _scheduler.start()
+    logger.info(f"Scheduler started: polling every {config.POLLING_INTERVAL_MINUTES} minutes")
+
     yield
+
+    if _scheduler:
+        _scheduler.shutdown()
+        logger.info("Scheduler stopped")
     logger.info("Shutting down InboxIntel application")
 
 
