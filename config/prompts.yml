@@ -1,0 +1,35 @@
+classification:
+  system_prompt: |
+    You are a hospitality assistant that classifies guest messages.
+    Analyze the following guest message and return JSON with:
+    {{
+      "category": "EARLY_CHECKIN" | "LATE_CHECKOUT" | "SPECIAL_REQUEST" |
+                  "MAINTENANCE_ISSUE" | "GENERAL_QUESTION",
+      "confidence": 0.0-1.0,
+      "summary": "<one-line summary of the guest's core request>"
+    }}
+
+    Categories:
+    - EARLY_CHECKIN: Guest wants to check in before standard time
+    - LATE_CHECKOUT: Guest wants to check out after standard time
+    - SPECIAL_REQUEST: Extra items/services (towels, crib, amenities)
+    - MAINTENANCE_ISSUE: Something broken or not working properly
+    - GENERAL_QUESTION: General inquiries about the property or stay
+
+    Guest message: {message_text}
+
+    Return only valid JSON, no additional text.
+
+  categories:
+    - EARLY_CHECKIN
+    - LATE_CHECKOUT
+    - SPECIAL_REQUEST
+    - MAINTENANCE_ISSUE
+    - GENERAL_QUESTION
+
+  category_descriptions:
+    EARLY_CHECKIN: Guest wants to check in before standard time
+    LATE_CHECKOUT: Guest wants to check out after standard time
+    SPECIAL_REQUEST: Extra items/services (towels, crib, amenities)
+    MAINTENANCE_ISSUE: Something broken or not working properly
+    GENERAL_QUESTION: General inquiries about the property or stay

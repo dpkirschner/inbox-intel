@@ -5,11 +5,7 @@ from unittest.mock import MagicMock, Mock, patch
 
 import pytest
 
-from src.llm_classifier import (
-    CLASSIFICATION_PROMPT,
-    ClassificationResult,
-    classify_message,
-)
+from src.llm_classifier import ClassificationResult, classify_message
 
 
 class TestClassificationResult:
@@ -234,11 +230,17 @@ class TestClassifyMessage:
         with pytest.raises(ValueError, match="Unsupported LLM provider: unsupported"):
             classify_message("test message")
 
-    def test_classification_prompt_format(self):
-        prompt = CLASSIFICATION_PROMPT.format(message_text="test message")
-        assert "test message" in prompt
-        assert "EARLY_CHECKIN" in prompt
-        assert "LATE_CHECKOUT" in prompt
-        assert "SPECIAL_REQUEST" in prompt
-        assert "MAINTENANCE_ISSUE" in prompt
-        assert "GENERAL_QUESTION" in prompt
+    def test_classification_prompt_loads_from_file(self):
+        from src.llm_classifier import _get_classification_prompt
+
+        prompt_template = _get_classification_prompt()
+        assert "{message_text}" in prompt_template
+        assert "EARLY_CHECKIN" in prompt_template
+        assert "LATE_CHECKOUT" in prompt_template
+        assert "SPECIAL_REQUEST" in prompt_template
+        assert "MAINTENANCE_ISSUE" in prompt_template
+        assert "GENERAL_QUESTION" in prompt_template
+
+        formatted_prompt = prompt_template.format(message_text="test message")
+        assert "test message" in formatted_prompt
+        assert "{message_text}" not in formatted_prompt
