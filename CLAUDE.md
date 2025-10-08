@@ -49,3 +49,4 @@ InboxIntel is a self-hosted service that connects to Guesty (property management
 - Full PRD: `docs/product.md`
 - Development roadmap: `docs/plan.md`
 - don't add any comments to the code unless strictly necessary.
+- don't add lines longer than 100 chars
