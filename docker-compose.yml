@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  inbox-intel:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: inbox-intel:latest
+    container_name: inbox-intel
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./.env:/app/.env:ro
+    environment:
+      - DATABASE_URL=sqlite:///data/inbox_intel.db
+      - WEBHOOK_PORT=8000
+    healthcheck:
+      test: ["CMD", "python", "-c", "import requests; requests.get('http://localhost:8000/', timeout=2)"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 10s
+    networks:
+      - inbox-intel-network
+
+networks:
+  inbox-intel-network:
+    driver: bridge
+
+volumes:
+  inbox-intel-data:

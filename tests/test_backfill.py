@@ -2,7 +2,7 @@
 
 from datetime import UTC, datetime
 from io import StringIO
-from unittest.mock import MagicMock, call, patch
+from unittest.mock import patch
 
 import pytest
 
