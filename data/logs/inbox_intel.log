@@ -3739,3 +3739,673 @@ WHERE messages.is_processed = 0]
 2025-10-07 22:55:29 - inbox_intel.src.worker - INFO - Alert sent for message msg_123
 2025-10-07 22:55:29 - inbox_intel.src.worker - INFO - Alert sent for message msg_456
 2025-10-07 22:55:29 - inbox_intel.src.worker - WARNING - Failed to send alert for msg_789: Failed to send
+2025-10-07 22:58:07 - inbox_intel - INFO - Fetching reservations for 2025-05-10
+2025-10-07 22:58:07 - inbox_intel - INFO - Found 1 reservations for 2025-05-10
+2025-10-07 22:58:07 - inbox_intel - INFO - Fetching reservations for 2025-05-10
+2025-10-07 22:58:07 - inbox_intel - INFO - Found 0 reservations for 2025-05-10
+2025-10-07 22:58:08 - inbox_intel - INFO - Generating daily summary for 2025-05-10
+2025-10-07 22:58:08 - inbox_intel - INFO - Fetching reservations for 2025-05-10
+2025-10-07 22:58:08 - inbox_intel - INFO - Found 0 reservations for 2025-05-10
+2025-10-07 22:58:08 - inbox_intel - INFO - Generating daily summary for 2025-05-10
+2025-10-07 22:58:08 - inbox_intel - INFO - Fetching reservations for 2025-05-10
+2025-10-07 22:58:08 - inbox_intel - INFO - Found 1 reservations for 2025-05-10
+2025-10-07 22:58:08 - inbox_intel - ERROR - Failed to generate daily summary: (sqlite3.OperationalError) no such table: messages
+[SQL: SELECT messages.id, messages.guesty_message_id, messages.conversation_id, messages.reservation_id, messages.guest_name, messages.message_text, messages.timestamp, messages.is_processed, messages.llm_category, messages.llm_summary, messages.llm_confidence 
+FROM messages 
+WHERE messages.reservation_id = ? AND messages.is_processed IS 1 AND messages.llm_category IS NOT NULL ORDER BY messages.timestamp ASC]
+[parameters: ('res_456',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-07 22:58:08 - inbox_intel - INFO - Generating daily summary for 2025-10-07
+2025-10-07 22:58:08 - inbox_intel - INFO - Fetching reservations for 2025-10-07
+2025-10-07 22:58:08 - inbox_intel - INFO - Found 0 reservations for 2025-10-07
+2025-10-07 22:58:18 - inbox_intel - INFO - Fetching reservations for 2025-05-10
+2025-10-07 22:58:18 - inbox_intel - INFO - Found 1 reservations for 2025-05-10
+2025-10-07 22:58:18 - inbox_intel - INFO - Fetching reservations for 2025-05-10
+2025-10-07 22:58:18 - inbox_intel - INFO - Found 0 reservations for 2025-05-10
+2025-10-07 22:58:18 - inbox_intel - INFO - Generating daily summary for 2025-05-10
+2025-10-07 22:58:18 - inbox_intel - INFO - Fetching reservations for 2025-05-10
+2025-10-07 22:58:18 - inbox_intel - INFO - Found 1 reservations for 2025-05-10
+2025-10-07 22:58:18 - inbox_intel - INFO - Generating daily summary for 2025-05-10
+2025-10-07 22:58:18 - inbox_intel - INFO - Fetching reservations for 2025-05-10
+2025-10-07 22:58:18 - inbox_intel - INFO - Found 0 reservations for 2025-05-10
+2025-10-07 22:58:18 - inbox_intel - INFO - Generating daily summary for 2025-05-10
+2025-10-07 22:58:18 - inbox_intel - INFO - Fetching reservations for 2025-05-10
+2025-10-07 22:58:18 - inbox_intel - INFO - Found 1 reservations for 2025-05-10
+2025-10-07 22:58:18 - inbox_intel - INFO - Generating daily summary for 2025-10-07
+2025-10-07 22:58:18 - inbox_intel - INFO - Fetching reservations for 2025-10-07
+2025-10-07 22:58:18 - inbox_intel - INFO - Found 0 reservations for 2025-10-07
+2025-10-08 18:40:03 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-08 18:40:03 - inbox_intel - INFO - Successfully obtained access token
+2025-10-08 18:40:03 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-08 18:40:03 - inbox_intel - INFO - Successfully obtained access token
+2025-10-08 18:40:03 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-08 18:40:03 - inbox_intel - ERROR - Failed to obtain access token: Network error
+2025-10-08 18:40:03 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-08 18:40:03 - inbox_intel - ERROR - Failed to obtain access token: 401 Unauthorized
+2025-10-08 18:40:03 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-08 18:40:03 - inbox_intel - INFO - Successfully obtained access token
+2025-10-08 18:40:03 - inbox_intel - ERROR - API request failed: GET https://open-api.guesty.com/v1/nonexistent - 404 Not Found
+2025-10-08 18:40:03 - inbox_intel - ERROR - API request failed: GET https://open-api.guesty.com/v1/listings - Connection timeout
+2025-10-08 18:40:03 - inbox_intel - INFO - Testing Guesty API connection by fetching listings
+2025-10-08 18:40:03 - inbox_intel.src.llm_classifier - ERROR - OpenAI classification failed: Empty response from OpenAI
+2025-10-08 18:40:03 - inbox_intel - INFO - Polling Guesty API for messages since 2025-10-09T01:35:03.756094+00:00
+2025-10-08 18:40:03 - inbox_intel - INFO - Found 3 messages from API
+2025-10-08 18:40:03 - inbox_intel - INFO - Saved new message from polling: msg_001
+2025-10-08 18:40:03 - inbox_intel - INFO - Saved new message from polling: msg_002
+2025-10-08 18:40:03 - inbox_intel - INFO - Saved new message from polling: msg_003
+2025-10-08 18:40:03 - inbox_intel - INFO - Polling complete: 3 new messages saved
+2025-10-08 18:40:03 - inbox_intel - INFO - Polling Guesty API for messages since 2025-10-09T01:35:03.757524+00:00
+2025-10-08 18:40:03 - inbox_intel - INFO - Found 3 messages from API
+2025-10-08 18:40:03 - inbox_intel - INFO - Saved new message from polling: msg_001
+2025-10-08 18:40:03 - inbox_intel - INFO - Saved new message from polling: msg_003
+2025-10-08 18:40:03 - inbox_intel - INFO - Polling complete: 2 new messages saved
+2025-10-08 18:40:03 - inbox_intel - INFO - Polling Guesty API for messages since 2025-10-09T01:35:03.759277+00:00
+2025-10-08 18:40:03 - inbox_intel - INFO - Found 0 messages from API
+2025-10-08 18:40:03 - inbox_intel - INFO - Polling complete: 0 new messages saved
+2025-10-08 18:40:03 - inbox_intel - INFO - Polling Guesty API for messages since 2025-10-09T01:35:03.760501+00:00
+2025-10-08 18:40:03 - inbox_intel - INFO - Found 3 messages from API
+2025-10-08 18:40:03 - inbox_intel - INFO - Saved new message from polling: msg_001
+2025-10-08 18:40:03 - inbox_intel - WARNING - Message missing '_id', skipping
+2025-10-08 18:40:03 - inbox_intel - INFO - Saved new message from polling: msg_003
+2025-10-08 18:40:03 - inbox_intel - INFO - Polling complete: 2 new messages saved
+2025-10-08 18:40:03 - inbox_intel - INFO - Polling Guesty API for messages since 2025-10-09T01:35:03.761742+00:00
+2025-10-08 18:40:03 - inbox_intel - INFO - Found 1 messages from API
+2025-10-08 18:40:03 - inbox_intel - ERROR - Failed to parse timestamp for message msg_001: Invalid isoformat string: 'invalid-timestamp'
+2025-10-08 18:40:03 - inbox_intel - INFO - Saved new message from polling: msg_001
+2025-10-08 18:40:03 - inbox_intel - INFO - Polling complete: 1 new messages saved
+2025-10-08 18:40:03 - inbox_intel - INFO - Polling Guesty API for messages since 2025-10-09T01:35:03.763150+00:00
+2025-10-08 18:40:03 - inbox_intel - ERROR - Error during message polling: API connection failed
+2025-10-08 18:40:03 - inbox_intel - INFO - Polling Guesty API for messages since 2025-10-09T01:25:03.764507+00:00
+2025-10-08 18:40:03 - inbox_intel - INFO - Found 3 messages from API
+2025-10-08 18:40:03 - inbox_intel - INFO - Saved new message from polling: msg_001
+2025-10-08 18:40:03 - inbox_intel - INFO - Saved new message from polling: msg_002
+2025-10-08 18:40:03 - inbox_intel - INFO - Saved new message from polling: msg_003
+2025-10-08 18:40:03 - inbox_intel - INFO - Polling complete: 3 new messages saved
+2025-10-08 18:40:03 - inbox_intel - INFO - Polling Guesty API for messages since 2025-10-09T01:35:03.765859+00:00
+2025-10-08 18:40:03 - inbox_intel - INFO - Found 1 messages from API
+2025-10-08 18:40:03 - inbox_intel - INFO - Saved new message from polling: msg_001
+2025-10-08 18:40:03 - inbox_intel - INFO - Polling complete: 1 new messages saved
+2025-10-08 18:40:03 - inbox_intel - INFO - Fetching reservations for 2025-05-10
+2025-10-08 18:40:03 - inbox_intel - INFO - Found 1 reservations for 2025-05-10
+2025-10-08 18:40:03 - inbox_intel - INFO - Fetching reservations for 2025-05-10
+2025-10-08 18:40:03 - inbox_intel - INFO - Found 0 reservations for 2025-05-10
+2025-10-08 18:40:03 - inbox_intel - INFO - Generating daily summary for 2025-05-10
+2025-10-08 18:40:03 - inbox_intel - INFO - Fetching reservations for 2025-05-10
+2025-10-08 18:40:03 - inbox_intel - INFO - Found 1 reservations for 2025-05-10
+2025-10-08 18:40:03 - inbox_intel - INFO - Generating daily summary for 2025-05-10
+2025-10-08 18:40:03 - inbox_intel - INFO - Fetching reservations for 2025-05-10
+2025-10-08 18:40:03 - inbox_intel - INFO - Found 0 reservations for 2025-05-10
+2025-10-08 18:40:03 - inbox_intel - INFO - Generating daily summary for 2025-05-10
+2025-10-08 18:40:03 - inbox_intel - INFO - Fetching reservations for 2025-05-10
+2025-10-08 18:40:03 - inbox_intel - INFO - Found 0 reservations for 2025-05-10
+2025-10-08 18:40:03 - inbox_intel - INFO - Generating daily summary for 2025-10-08
+2025-10-08 18:40:03 - inbox_intel - INFO - Fetching reservations for 2025-10-08
+2025-10-08 18:40:03 - inbox_intel - INFO - Found 0 reservations for 2025-10-08
+2025-10-08 18:40:03 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-08 18:40:03 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-08 18:40:03 - inbox_intel - INFO - Scheduler started: polling every 5 minutes
+2025-10-08 18:40:03 - inbox_intel - INFO - Scheduler started: processing every 30 seconds
+2025-10-08 18:40:03 - inbox_intel - INFO - Scheduler stopped
+2025-10-08 18:40:03 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-08 18:40:03 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-08 18:40:03 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-08 18:40:03 - inbox_intel - INFO - Scheduler started: polling every 5 minutes
+2025-10-08 18:40:03 - inbox_intel - INFO - Scheduler started: processing every 30 seconds
+2025-10-08 18:40:03 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-08 18:40:03 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-08 18:40:03 - inbox_intel - INFO - Scheduler stopped
+2025-10-08 18:40:03 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-08 18:40:03 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-08 18:40:03 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-08 18:40:03 - inbox_intel - INFO - Scheduler started: polling every 5 minutes
+2025-10-08 18:40:03 - inbox_intel - INFO - Scheduler started: processing every 30 seconds
+2025-10-08 18:40:03 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-08 18:40:03 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-08 18:40:03 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-08 18:40:03 - inbox_intel - INFO - Duplicate message skipped: msg_abc123
+2025-10-08 18:40:03 - inbox_intel - INFO - Scheduler stopped
+2025-10-08 18:40:03 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-08 18:40:03 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-08 18:40:03 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-08 18:40:03 - inbox_intel - INFO - Scheduler started: polling every 5 minutes
+2025-10-08 18:40:03 - inbox_intel - INFO - Scheduler started: processing every 30 seconds
+2025-10-08 18:40:03 - inbox_intel - INFO - Received webhook: reservation.updated
+2025-10-08 18:40:03 - inbox_intel - WARNING - Unsupported event type: reservation.updated
+2025-10-08 18:40:03 - inbox_intel - INFO - Scheduler stopped
+2025-10-08 18:40:03 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-08 18:40:03 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-08 18:40:03 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-08 18:40:03 - inbox_intel - INFO - Scheduler started: polling every 5 minutes
+2025-10-08 18:40:03 - inbox_intel - INFO - Scheduler started: processing every 30 seconds
+2025-10-08 18:40:03 - inbox_intel - INFO - Scheduler stopped
+2025-10-08 18:40:03 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-08 18:40:03 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-08 18:40:03 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-08 18:40:03 - inbox_intel - INFO - Scheduler started: polling every 5 minutes
+2025-10-08 18:40:03 - inbox_intel - INFO - Scheduler started: processing every 30 seconds
+2025-10-08 18:40:03 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-08 18:40:03 - inbox_intel - ERROR - Message missing '_id' field
+2025-10-08 18:40:03 - inbox_intel - INFO - Scheduler stopped
+2025-10-08 18:40:03 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-08 18:40:03 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-08 18:40:03 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-08 18:40:03 - inbox_intel - INFO - Scheduler started: polling every 5 minutes
+2025-10-08 18:40:03 - inbox_intel - INFO - Scheduler started: processing every 30 seconds
+2025-10-08 18:40:03 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-08 18:40:03 - inbox_intel - WARNING - Message msg_abc123 has empty body
+2025-10-08 18:40:03 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-08 18:40:03 - inbox_intel - INFO - Scheduler stopped
+2025-10-08 18:40:03 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-08 18:40:03 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-08 18:40:03 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-08 18:40:03 - inbox_intel - INFO - Scheduler started: polling every 5 minutes
+2025-10-08 18:40:03 - inbox_intel - INFO - Scheduler started: processing every 30 seconds
+2025-10-08 18:40:03 - inbox_intel - INFO - Received webhook: reservation.messageSent
+2025-10-08 18:40:03 - inbox_intel - INFO - Saved new message: msg_sent_001
+2025-10-08 18:40:03 - inbox_intel - INFO - Scheduler stopped
+2025-10-08 18:40:03 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-08 18:40:03 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-08 18:40:03 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-08 18:40:03 - inbox_intel - INFO - Scheduler started: polling every 5 minutes
+2025-10-08 18:40:03 - inbox_intel - INFO - Scheduler started: processing every 30 seconds
+2025-10-08 18:40:03 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-08 18:40:03 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-08 18:40:03 - inbox_intel - INFO - Scheduler stopped
+2025-10-08 18:40:03 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-08 18:40:03 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-08 18:40:03 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-08 18:40:03 - inbox_intel - INFO - Scheduler started: polling every 5 minutes
+2025-10-08 18:40:03 - inbox_intel - INFO - Scheduler started: processing every 30 seconds
+2025-10-08 18:40:03 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-08 18:40:03 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-08 18:40:03 - inbox_intel - INFO - Scheduler stopped
+2025-10-08 18:40:03 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-08 18:40:03 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-08 18:40:03 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-08 18:40:03 - inbox_intel - INFO - Scheduler started: polling every 5 minutes
+2025-10-08 18:40:03 - inbox_intel - INFO - Scheduler started: processing every 30 seconds
+2025-10-08 18:40:03 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-08 18:40:03 - inbox_intel - ERROR - Failed to parse timestamp: Invalid isoformat string: 'invalid-timestamp'
+2025-10-08 18:40:03 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-08 18:40:03 - inbox_intel - INFO - Scheduler stopped
+2025-10-08 18:40:03 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-08 18:40:03 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-08 18:40:03 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-08 18:40:03 - inbox_intel - INFO - Scheduler started: polling every 5 minutes
+2025-10-08 18:40:03 - inbox_intel - INFO - Scheduler started: processing every 30 seconds
+2025-10-08 18:40:03 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-08 18:40:03 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-08 18:40:03 - inbox_intel - INFO - Scheduler stopped
+2025-10-08 18:40:03 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-08 18:40:03 - inbox_intel.src.worker - INFO - Processing 1 unclassified messages
+2025-10-08 18:40:03 - inbox_intel.src.worker - INFO - Classified message msg_123: EARLY_CHECKIN (confidence: 0.95)
+2025-10-08 18:40:03 - inbox_intel.src.worker - WARNING - Failed to send alert for msg_123: Pushover credentials not configured
+2025-10-08 18:40:03 - inbox_intel.src.worker - INFO - Successfully processed 1 messages
+2025-10-08 18:40:03 - inbox_intel.src.worker - INFO - Processing 2 unclassified messages
+2025-10-08 18:40:03 - inbox_intel.src.worker - INFO - Classified message msg_1: EARLY_CHECKIN (confidence: 0.90)
+2025-10-08 18:40:03 - inbox_intel.src.worker - WARNING - Failed to send alert for msg_1: Pushover credentials not configured
+2025-10-08 18:40:03 - inbox_intel.src.worker - INFO - Classified message msg_2: MAINTENANCE_ISSUE (confidence: 0.98)
+2025-10-08 18:40:03 - inbox_intel.src.worker - WARNING - Failed to send alert for msg_2: Pushover credentials not configured
+2025-10-08 18:40:03 - inbox_intel.src.worker - INFO - Successfully processed 2 messages
+2025-10-08 18:40:03 - inbox_intel.src.worker - INFO - Processing 1 unclassified messages
+2025-10-08 18:40:03 - inbox_intel.src.worker - INFO - Classified message msg_unprocessed: SPECIAL_REQUEST (confidence: 0.88)
+2025-10-08 18:40:03 - inbox_intel.src.worker - WARNING - Failed to send alert for msg_unprocessed: Pushover credentials not configured
+2025-10-08 18:40:03 - inbox_intel.src.worker - INFO - Successfully processed 1 messages
+2025-10-08 18:40:03 - inbox_intel.src.worker - INFO - Processing 2 unclassified messages
+2025-10-08 18:40:03 - inbox_intel.src.worker - ERROR - Failed to classify message msg_1: LLM API error
+2025-10-08 18:40:03 - inbox_intel.src.worker - INFO - Classified message msg_2: GENERAL_QUESTION (confidence: 0.80)
+2025-10-08 18:40:03 - inbox_intel.src.worker - INFO - Successfully processed 1 messages
+2025-10-08 18:40:03 - inbox_intel.src.worker - INFO - Processing 1 unclassified messages
+2025-10-08 18:40:03 - inbox_intel.src.worker - ERROR - Failed to classify message msg_fail: Classification failed
+2025-10-08 18:40:03 - inbox_intel.src.worker - INFO - Successfully processed 0 messages
+2025-10-08 18:40:03 - inbox_intel.src.worker - INFO - Processing 1 unclassified messages
+2025-10-08 18:40:03 - inbox_intel.src.worker - INFO - Classified message msg_alert: EARLY_CHECKIN (confidence: 0.95)
+2025-10-08 18:40:03 - inbox_intel.src.worker - INFO - Alert sent for message msg_alert
+2025-10-08 18:40:03 - inbox_intel.src.worker - INFO - Successfully processed 1 messages
+2025-10-08 18:40:03 - inbox_intel.src.worker - INFO - Processing 1 unclassified messages
+2025-10-08 18:40:03 - inbox_intel.src.worker - INFO - Classified message msg_no_alert: GENERAL_QUESTION (confidence: 0.92)
+2025-10-08 18:40:03 - inbox_intel.src.worker - INFO - Successfully processed 1 messages
+2025-10-08 18:40:03 - inbox_intel.src.worker - INFO - Processing 1 unclassified messages
+2025-10-08 18:40:03 - inbox_intel.src.worker - INFO - Classified message msg_low_conf: EARLY_CHECKIN (confidence: 0.65)
+2025-10-08 18:40:03 - inbox_intel.src.worker - INFO - Successfully processed 1 messages
+2025-10-08 18:40:03 - inbox_intel.src.worker - INFO - Processing 1 unclassified messages
+2025-10-08 18:40:03 - inbox_intel.src.worker - INFO - Classified message msg_alert_fail: EARLY_CHECKIN (confidence: 0.95)
+2025-10-08 18:40:03 - inbox_intel.src.worker - WARNING - Failed to send alert for msg_alert_fail: API error
+2025-10-08 18:40:03 - inbox_intel.src.worker - INFO - Successfully processed 1 messages
+2025-10-08 18:40:04 - inbox_intel.src.worker - INFO - Alert sent for message msg_123
+2025-10-08 18:40:04 - inbox_intel.src.worker - INFO - Alert sent for message msg_456
+2025-10-08 18:40:04 - inbox_intel.src.worker - WARNING - Failed to send alert for msg_789: Failed to send
+2025-10-08 18:40:44 - inbox_intel - INFO - Fetching reservations for 2025-05-10
+2025-10-08 18:40:44 - inbox_intel - INFO - Found 1 reservations for 2025-05-10
+2025-10-08 18:40:44 - inbox_intel - INFO - Fetching reservations for 2025-05-10
+2025-10-08 18:40:44 - inbox_intel - INFO - Found 0 reservations for 2025-05-10
+2025-10-08 18:40:44 - inbox_intel - INFO - Generating daily summary for 2025-05-10
+2025-10-08 18:40:44 - inbox_intel - INFO - Fetching reservations for 2025-05-10
+2025-10-08 18:40:44 - inbox_intel - INFO - Found 1 reservations for 2025-05-10
+2025-10-08 18:40:44 - inbox_intel - INFO - Generating daily summary for 2025-05-10
+2025-10-08 18:40:44 - inbox_intel - INFO - Fetching reservations for 2025-05-10
+2025-10-08 18:40:44 - inbox_intel - INFO - Found 0 reservations for 2025-05-10
+2025-10-08 18:40:44 - inbox_intel - INFO - Generating daily summary for 2025-05-10
+2025-10-08 18:40:44 - inbox_intel - INFO - Fetching reservations for 2025-05-10
+2025-10-08 18:40:44 - inbox_intel - INFO - Found 1 reservations for 2025-05-10
+2025-10-08 18:40:44 - inbox_intel - INFO - Generating daily summary for 2025-10-08
+2025-10-08 18:40:44 - inbox_intel - INFO - Fetching reservations for 2025-10-08
+2025-10-08 18:40:44 - inbox_intel - INFO - Found 0 reservations for 2025-10-08
+2025-10-08 18:40:58 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-08 18:40:58 - inbox_intel - INFO - Successfully obtained access token
+2025-10-08 18:40:58 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-08 18:40:58 - inbox_intel - INFO - Successfully obtained access token
+2025-10-08 18:40:58 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-08 18:40:58 - inbox_intel - ERROR - Failed to obtain access token: Network error
+2025-10-08 18:40:58 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-08 18:40:58 - inbox_intel - ERROR - Failed to obtain access token: 401 Unauthorized
+2025-10-08 18:40:58 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-08 18:40:58 - inbox_intel - INFO - Successfully obtained access token
+2025-10-08 18:40:58 - inbox_intel - ERROR - API request failed: GET https://open-api.guesty.com/v1/nonexistent - 404 Not Found
+2025-10-08 18:40:58 - inbox_intel - ERROR - API request failed: GET https://open-api.guesty.com/v1/listings - Connection timeout
+2025-10-08 18:40:58 - inbox_intel - INFO - Testing Guesty API connection by fetching listings
+2025-10-08 18:40:58 - inbox_intel.src.llm_classifier - ERROR - OpenAI classification failed: Empty response from OpenAI
+2025-10-08 18:40:58 - inbox_intel - INFO - Polling Guesty API for messages since 2025-10-09T01:35:58.556808+00:00
+2025-10-08 18:40:58 - inbox_intel - INFO - Found 3 messages from API
+2025-10-08 18:40:58 - inbox_intel - INFO - Saved new message from polling: msg_001
+2025-10-08 18:40:58 - inbox_intel - INFO - Saved new message from polling: msg_002
+2025-10-08 18:40:58 - inbox_intel - INFO - Saved new message from polling: msg_003
+2025-10-08 18:40:58 - inbox_intel - INFO - Polling complete: 3 new messages saved
+2025-10-08 18:40:58 - inbox_intel - INFO - Polling Guesty API for messages since 2025-10-09T01:35:58.558286+00:00
+2025-10-08 18:40:58 - inbox_intel - INFO - Found 3 messages from API
+2025-10-08 18:40:58 - inbox_intel - INFO - Saved new message from polling: msg_001
+2025-10-08 18:40:58 - inbox_intel - INFO - Saved new message from polling: msg_003
+2025-10-08 18:40:58 - inbox_intel - INFO - Polling complete: 2 new messages saved
+2025-10-08 18:40:58 - inbox_intel - INFO - Polling Guesty API for messages since 2025-10-09T01:35:58.559499+00:00
+2025-10-08 18:40:58 - inbox_intel - INFO - Found 0 messages from API
+2025-10-08 18:40:58 - inbox_intel - INFO - Polling complete: 0 new messages saved
+2025-10-08 18:40:58 - inbox_intel - INFO - Polling Guesty API for messages since 2025-10-09T01:35:58.560724+00:00
+2025-10-08 18:40:58 - inbox_intel - INFO - Found 3 messages from API
+2025-10-08 18:40:58 - inbox_intel - INFO - Saved new message from polling: msg_001
+2025-10-08 18:40:58 - inbox_intel - WARNING - Message missing '_id', skipping
+2025-10-08 18:40:58 - inbox_intel - INFO - Saved new message from polling: msg_003
+2025-10-08 18:40:58 - inbox_intel - INFO - Polling complete: 2 new messages saved
+2025-10-08 18:40:58 - inbox_intel - INFO - Polling Guesty API for messages since 2025-10-09T01:35:58.561995+00:00
+2025-10-08 18:40:58 - inbox_intel - INFO - Found 1 messages from API
+2025-10-08 18:40:58 - inbox_intel - ERROR - Failed to parse timestamp for message msg_001: Invalid isoformat string: 'invalid-timestamp'
+2025-10-08 18:40:58 - inbox_intel - INFO - Saved new message from polling: msg_001
+2025-10-08 18:40:58 - inbox_intel - INFO - Polling complete: 1 new messages saved
+2025-10-08 18:40:58 - inbox_intel - INFO - Polling Guesty API for messages since 2025-10-09T01:35:58.563164+00:00
+2025-10-08 18:40:58 - inbox_intel - ERROR - Error during message polling: API connection failed
+2025-10-08 18:40:58 - inbox_intel - INFO - Polling Guesty API for messages since 2025-10-09T01:25:58.564906+00:00
+2025-10-08 18:40:58 - inbox_intel - INFO - Found 3 messages from API
+2025-10-08 18:40:58 - inbox_intel - INFO - Saved new message from polling: msg_001
+2025-10-08 18:40:58 - inbox_intel - INFO - Saved new message from polling: msg_002
+2025-10-08 18:40:58 - inbox_intel - INFO - Saved new message from polling: msg_003
+2025-10-08 18:40:58 - inbox_intel - INFO - Polling complete: 3 new messages saved
+2025-10-08 18:40:58 - inbox_intel - INFO - Polling Guesty API for messages since 2025-10-09T01:35:58.566243+00:00
+2025-10-08 18:40:58 - inbox_intel - INFO - Found 1 messages from API
+2025-10-08 18:40:58 - inbox_intel - INFO - Saved new message from polling: msg_001
+2025-10-08 18:40:58 - inbox_intel - INFO - Polling complete: 1 new messages saved
+2025-10-08 18:40:58 - inbox_intel - INFO - Fetching reservations for 2025-05-10
+2025-10-08 18:40:58 - inbox_intel - INFO - Found 1 reservations for 2025-05-10
+2025-10-08 18:40:58 - inbox_intel - INFO - Fetching reservations for 2025-05-10
+2025-10-08 18:40:58 - inbox_intel - INFO - Found 0 reservations for 2025-05-10
+2025-10-08 18:40:58 - inbox_intel - INFO - Generating daily summary for 2025-05-10
+2025-10-08 18:40:58 - inbox_intel - INFO - Fetching reservations for 2025-05-10
+2025-10-08 18:40:58 - inbox_intel - INFO - Found 1 reservations for 2025-05-10
+2025-10-08 18:40:58 - inbox_intel - INFO - Generating daily summary for 2025-05-10
+2025-10-08 18:40:58 - inbox_intel - INFO - Fetching reservations for 2025-05-10
+2025-10-08 18:40:58 - inbox_intel - INFO - Found 0 reservations for 2025-05-10
+2025-10-08 18:40:58 - inbox_intel - INFO - Generating daily summary for 2025-05-10
+2025-10-08 18:40:58 - inbox_intel - INFO - Fetching reservations for 2025-05-10
+2025-10-08 18:40:58 - inbox_intel - INFO - Found 1 reservations for 2025-05-10
+2025-10-08 18:40:58 - inbox_intel - INFO - Generating daily summary for 2025-10-08
+2025-10-08 18:40:58 - inbox_intel - INFO - Fetching reservations for 2025-10-08
+2025-10-08 18:40:58 - inbox_intel - INFO - Found 0 reservations for 2025-10-08
+2025-10-08 18:40:58 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-08 18:40:58 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-08 18:40:58 - inbox_intel - INFO - Scheduler started: polling every 5 minutes
+2025-10-08 18:40:58 - inbox_intel - INFO - Scheduler started: processing every 30 seconds
+2025-10-08 18:40:58 - inbox_intel - INFO - Scheduler stopped
+2025-10-08 18:40:58 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-08 18:40:58 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-08 18:40:58 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-08 18:40:58 - inbox_intel - INFO - Scheduler started: polling every 5 minutes
+2025-10-08 18:40:58 - inbox_intel - INFO - Scheduler started: processing every 30 seconds
+2025-10-08 18:40:58 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-08 18:40:58 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-08 18:40:58 - inbox_intel - INFO - Scheduler stopped
+2025-10-08 18:40:58 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-08 18:40:58 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-08 18:40:58 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-08 18:40:58 - inbox_intel - INFO - Scheduler started: polling every 5 minutes
+2025-10-08 18:40:58 - inbox_intel - INFO - Scheduler started: processing every 30 seconds
+2025-10-08 18:40:58 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-08 18:40:58 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-08 18:40:58 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-08 18:40:58 - inbox_intel - INFO - Duplicate message skipped: msg_abc123
+2025-10-08 18:40:58 - inbox_intel - INFO - Scheduler stopped
+2025-10-08 18:40:58 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-08 18:40:58 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-08 18:40:58 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-08 18:40:58 - inbox_intel - INFO - Scheduler started: polling every 5 minutes
+2025-10-08 18:40:58 - inbox_intel - INFO - Scheduler started: processing every 30 seconds
+2025-10-08 18:40:58 - inbox_intel - INFO - Received webhook: reservation.updated
+2025-10-08 18:40:58 - inbox_intel - WARNING - Unsupported event type: reservation.updated
+2025-10-08 18:40:58 - inbox_intel - INFO - Scheduler stopped
+2025-10-08 18:40:58 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-08 18:40:58 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-08 18:40:58 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-08 18:40:58 - inbox_intel - INFO - Scheduler started: polling every 5 minutes
+2025-10-08 18:40:58 - inbox_intel - INFO - Scheduler started: processing every 30 seconds
+2025-10-08 18:40:58 - inbox_intel - INFO - Scheduler stopped
+2025-10-08 18:40:58 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-08 18:40:58 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-08 18:40:58 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-08 18:40:58 - inbox_intel - INFO - Scheduler started: polling every 5 minutes
+2025-10-08 18:40:58 - inbox_intel - INFO - Scheduler started: processing every 30 seconds
+2025-10-08 18:40:58 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-08 18:40:58 - inbox_intel - ERROR - Message missing '_id' field
+2025-10-08 18:40:58 - inbox_intel - INFO - Scheduler stopped
+2025-10-08 18:40:58 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-08 18:40:58 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-08 18:40:58 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-08 18:40:58 - inbox_intel - INFO - Scheduler started: polling every 5 minutes
+2025-10-08 18:40:58 - inbox_intel - INFO - Scheduler started: processing every 30 seconds
+2025-10-08 18:40:58 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-08 18:40:58 - inbox_intel - WARNING - Message msg_abc123 has empty body
+2025-10-08 18:40:58 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-08 18:40:58 - inbox_intel - INFO - Scheduler stopped
+2025-10-08 18:40:58 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-08 18:40:58 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-08 18:40:58 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-08 18:40:58 - inbox_intel - INFO - Scheduler started: polling every 5 minutes
+2025-10-08 18:40:58 - inbox_intel - INFO - Scheduler started: processing every 30 seconds
+2025-10-08 18:40:58 - inbox_intel - INFO - Received webhook: reservation.messageSent
+2025-10-08 18:40:58 - inbox_intel - INFO - Saved new message: msg_sent_001
+2025-10-08 18:40:58 - inbox_intel - INFO - Scheduler stopped
+2025-10-08 18:40:58 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-08 18:40:58 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-08 18:40:58 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-08 18:40:58 - inbox_intel - INFO - Scheduler started: polling every 5 minutes
+2025-10-08 18:40:58 - inbox_intel - INFO - Scheduler started: processing every 30 seconds
+2025-10-08 18:40:58 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-08 18:40:58 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-08 18:40:58 - inbox_intel - INFO - Scheduler stopped
+2025-10-08 18:40:58 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-08 18:40:58 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-08 18:40:58 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-08 18:40:58 - inbox_intel - INFO - Scheduler started: polling every 5 minutes
+2025-10-08 18:40:58 - inbox_intel - INFO - Scheduler started: processing every 30 seconds
+2025-10-08 18:40:58 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-08 18:40:58 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-08 18:40:58 - inbox_intel - INFO - Scheduler stopped
+2025-10-08 18:40:58 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-08 18:40:58 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-08 18:40:58 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-08 18:40:58 - inbox_intel - INFO - Scheduler started: polling every 5 minutes
+2025-10-08 18:40:58 - inbox_intel - INFO - Scheduler started: processing every 30 seconds
+2025-10-08 18:40:58 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-08 18:40:58 - inbox_intel - ERROR - Failed to parse timestamp: Invalid isoformat string: 'invalid-timestamp'
+2025-10-08 18:40:58 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-08 18:40:58 - inbox_intel - INFO - Scheduler stopped
+2025-10-08 18:40:58 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-08 18:40:58 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-08 18:40:58 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-08 18:40:58 - inbox_intel - INFO - Scheduler started: polling every 5 minutes
+2025-10-08 18:40:58 - inbox_intel - INFO - Scheduler started: processing every 30 seconds
+2025-10-08 18:40:58 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-08 18:40:58 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-08 18:40:58 - inbox_intel - INFO - Scheduler stopped
+2025-10-08 18:40:58 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-08 18:40:58 - inbox_intel.src.worker - INFO - Processing 1 unclassified messages
+2025-10-08 18:40:58 - inbox_intel.src.worker - INFO - Classified message msg_123: EARLY_CHECKIN (confidence: 0.95)
+2025-10-08 18:40:58 - inbox_intel.src.worker - WARNING - Failed to send alert for msg_123: Pushover credentials not configured
+2025-10-08 18:40:58 - inbox_intel.src.worker - INFO - Successfully processed 1 messages
+2025-10-08 18:40:58 - inbox_intel.src.worker - INFO - Processing 2 unclassified messages
+2025-10-08 18:40:58 - inbox_intel.src.worker - INFO - Classified message msg_1: EARLY_CHECKIN (confidence: 0.90)
+2025-10-08 18:40:58 - inbox_intel.src.worker - WARNING - Failed to send alert for msg_1: Pushover credentials not configured
+2025-10-08 18:40:58 - inbox_intel.src.worker - INFO - Classified message msg_2: MAINTENANCE_ISSUE (confidence: 0.98)
+2025-10-08 18:40:58 - inbox_intel.src.worker - WARNING - Failed to send alert for msg_2: Pushover credentials not configured
+2025-10-08 18:40:58 - inbox_intel.src.worker - INFO - Successfully processed 2 messages
+2025-10-08 18:40:58 - inbox_intel.src.worker - INFO - Processing 1 unclassified messages
+2025-10-08 18:40:58 - inbox_intel.src.worker - INFO - Classified message msg_unprocessed: SPECIAL_REQUEST (confidence: 0.88)
+2025-10-08 18:40:58 - inbox_intel.src.worker - WARNING - Failed to send alert for msg_unprocessed: Pushover credentials not configured
+2025-10-08 18:40:58 - inbox_intel.src.worker - INFO - Successfully processed 1 messages
+2025-10-08 18:40:58 - inbox_intel.src.worker - INFO - Processing 2 unclassified messages
+2025-10-08 18:40:58 - inbox_intel.src.worker - ERROR - Failed to classify message msg_1: LLM API error
+2025-10-08 18:40:58 - inbox_intel.src.worker - INFO - Classified message msg_2: GENERAL_QUESTION (confidence: 0.80)
+2025-10-08 18:40:58 - inbox_intel.src.worker - INFO - Successfully processed 1 messages
+2025-10-08 18:40:58 - inbox_intel.src.worker - INFO - Processing 1 unclassified messages
+2025-10-08 18:40:58 - inbox_intel.src.worker - ERROR - Failed to classify message msg_fail: Classification failed
+2025-10-08 18:40:58 - inbox_intel.src.worker - INFO - Successfully processed 0 messages
+2025-10-08 18:40:58 - inbox_intel.src.worker - INFO - Processing 1 unclassified messages
+2025-10-08 18:40:58 - inbox_intel.src.worker - INFO - Classified message msg_alert: EARLY_CHECKIN (confidence: 0.95)
+2025-10-08 18:40:58 - inbox_intel.src.worker - INFO - Alert sent for message msg_alert
+2025-10-08 18:40:58 - inbox_intel.src.worker - INFO - Successfully processed 1 messages
+2025-10-08 18:40:58 - inbox_intel.src.worker - INFO - Processing 1 unclassified messages
+2025-10-08 18:40:58 - inbox_intel.src.worker - INFO - Classified message msg_no_alert: GENERAL_QUESTION (confidence: 0.92)
+2025-10-08 18:40:58 - inbox_intel.src.worker - INFO - Successfully processed 1 messages
+2025-10-08 18:40:58 - inbox_intel.src.worker - INFO - Processing 1 unclassified messages
+2025-10-08 18:40:58 - inbox_intel.src.worker - INFO - Classified message msg_low_conf: EARLY_CHECKIN (confidence: 0.65)
+2025-10-08 18:40:58 - inbox_intel.src.worker - INFO - Successfully processed 1 messages
+2025-10-08 18:40:58 - inbox_intel.src.worker - INFO - Processing 1 unclassified messages
+2025-10-08 18:40:58 - inbox_intel.src.worker - INFO - Classified message msg_alert_fail: EARLY_CHECKIN (confidence: 0.95)
+2025-10-08 18:40:58 - inbox_intel.src.worker - WARNING - Failed to send alert for msg_alert_fail: API error
+2025-10-08 18:40:58 - inbox_intel.src.worker - INFO - Successfully processed 1 messages
+2025-10-08 18:40:58 - inbox_intel.src.worker - INFO - Alert sent for message msg_123
+2025-10-08 18:40:58 - inbox_intel.src.worker - INFO - Alert sent for message msg_456
+2025-10-08 18:40:58 - inbox_intel.src.worker - WARNING - Failed to send alert for msg_789: Failed to send
+2025-10-08 18:41:53 - inbox_intel - INFO - Fetching reservations for 2025-05-10
+2025-10-08 18:41:53 - inbox_intel - INFO - Found 1 reservations for 2025-05-10
+2025-10-08 18:41:53 - inbox_intel - INFO - Fetching reservations for 2025-05-10
+2025-10-08 18:41:53 - inbox_intel - INFO - Found 0 reservations for 2025-05-10
+2025-10-08 18:41:53 - inbox_intel - INFO - Generating daily summary for 2025-05-10
+2025-10-08 18:41:53 - inbox_intel - INFO - Fetching reservations for 2025-05-10
+2025-10-08 18:41:53 - inbox_intel - INFO - Found 1 reservations for 2025-05-10
+2025-10-08 18:41:53 - inbox_intel - INFO - Generating daily summary for 2025-05-10
+2025-10-08 18:41:53 - inbox_intel - INFO - Fetching reservations for 2025-05-10
+2025-10-08 18:41:53 - inbox_intel - INFO - Found 0 reservations for 2025-05-10
+2025-10-08 18:41:53 - inbox_intel - INFO - Generating daily summary for 2025-05-10
+2025-10-08 18:41:53 - inbox_intel - INFO - Fetching reservations for 2025-05-10
+2025-10-08 18:41:53 - inbox_intel - INFO - Found 1 reservations for 2025-05-10
+2025-10-08 18:41:53 - inbox_intel - INFO - Generating daily summary for 2025-10-08
+2025-10-08 18:41:53 - inbox_intel - INFO - Fetching reservations for 2025-10-08
+2025-10-08 18:41:53 - inbox_intel - INFO - Found 0 reservations for 2025-10-08
+2025-10-08 18:42:02 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-08 18:42:02 - inbox_intel - INFO - Successfully obtained access token
+2025-10-08 18:42:02 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-08 18:42:02 - inbox_intel - INFO - Successfully obtained access token
+2025-10-08 18:42:02 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-08 18:42:02 - inbox_intel - ERROR - Failed to obtain access token: Network error
+2025-10-08 18:42:02 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-08 18:42:02 - inbox_intel - ERROR - Failed to obtain access token: 401 Unauthorized
+2025-10-08 18:42:02 - inbox_intel - INFO - Requesting new access token from Guesty API
+2025-10-08 18:42:02 - inbox_intel - INFO - Successfully obtained access token
+2025-10-08 18:42:02 - inbox_intel - ERROR - API request failed: GET https://open-api.guesty.com/v1/nonexistent - 404 Not Found
+2025-10-08 18:42:02 - inbox_intel - ERROR - API request failed: GET https://open-api.guesty.com/v1/listings - Connection timeout
+2025-10-08 18:42:02 - inbox_intel - INFO - Testing Guesty API connection by fetching listings
+2025-10-08 18:42:02 - inbox_intel.src.llm_classifier - ERROR - OpenAI classification failed: Empty response from OpenAI
+2025-10-08 18:42:02 - inbox_intel - INFO - Polling Guesty API for messages since 2025-10-09T01:37:02.876311+00:00
+2025-10-08 18:42:02 - inbox_intel - INFO - Found 3 messages from API
+2025-10-08 18:42:02 - inbox_intel - INFO - Saved new message from polling: msg_001
+2025-10-08 18:42:02 - inbox_intel - INFO - Saved new message from polling: msg_002
+2025-10-08 18:42:02 - inbox_intel - INFO - Saved new message from polling: msg_003
+2025-10-08 18:42:02 - inbox_intel - INFO - Polling complete: 3 new messages saved
+2025-10-08 18:42:02 - inbox_intel - INFO - Polling Guesty API for messages since 2025-10-09T01:37:02.877707+00:00
+2025-10-08 18:42:02 - inbox_intel - INFO - Found 3 messages from API
+2025-10-08 18:42:02 - inbox_intel - INFO - Saved new message from polling: msg_001
+2025-10-08 18:42:02 - inbox_intel - INFO - Saved new message from polling: msg_003
+2025-10-08 18:42:02 - inbox_intel - INFO - Polling complete: 2 new messages saved
+2025-10-08 18:42:02 - inbox_intel - INFO - Polling Guesty API for messages since 2025-10-09T01:37:02.879781+00:00
+2025-10-08 18:42:02 - inbox_intel - INFO - Found 0 messages from API
+2025-10-08 18:42:02 - inbox_intel - INFO - Polling complete: 0 new messages saved
+2025-10-08 18:42:02 - inbox_intel - INFO - Polling Guesty API for messages since 2025-10-09T01:37:02.881106+00:00
+2025-10-08 18:42:02 - inbox_intel - INFO - Found 3 messages from API
+2025-10-08 18:42:02 - inbox_intel - INFO - Saved new message from polling: msg_001
+2025-10-08 18:42:02 - inbox_intel - WARNING - Message missing '_id', skipping
+2025-10-08 18:42:02 - inbox_intel - INFO - Saved new message from polling: msg_003
+2025-10-08 18:42:02 - inbox_intel - INFO - Polling complete: 2 new messages saved
+2025-10-08 18:42:02 - inbox_intel - INFO - Polling Guesty API for messages since 2025-10-09T01:37:02.882392+00:00
+2025-10-08 18:42:02 - inbox_intel - INFO - Found 1 messages from API
+2025-10-08 18:42:02 - inbox_intel - ERROR - Failed to parse timestamp for message msg_001: Invalid isoformat string: 'invalid-timestamp'
+2025-10-08 18:42:02 - inbox_intel - INFO - Saved new message from polling: msg_001
+2025-10-08 18:42:02 - inbox_intel - INFO - Polling complete: 1 new messages saved
+2025-10-08 18:42:02 - inbox_intel - INFO - Polling Guesty API for messages since 2025-10-09T01:37:02.883629+00:00
+2025-10-08 18:42:02 - inbox_intel - ERROR - Error during message polling: API connection failed
+2025-10-08 18:42:02 - inbox_intel - INFO - Polling Guesty API for messages since 2025-10-09T01:27:02.884884+00:00
+2025-10-08 18:42:02 - inbox_intel - INFO - Found 3 messages from API
+2025-10-08 18:42:02 - inbox_intel - INFO - Saved new message from polling: msg_001
+2025-10-08 18:42:02 - inbox_intel - INFO - Saved new message from polling: msg_002
+2025-10-08 18:42:02 - inbox_intel - INFO - Saved new message from polling: msg_003
+2025-10-08 18:42:02 - inbox_intel - INFO - Polling complete: 3 new messages saved
+2025-10-08 18:42:02 - inbox_intel - INFO - Polling Guesty API for messages since 2025-10-09T01:37:02.886238+00:00
+2025-10-08 18:42:02 - inbox_intel - INFO - Found 1 messages from API
+2025-10-08 18:42:02 - inbox_intel - INFO - Saved new message from polling: msg_001
+2025-10-08 18:42:02 - inbox_intel - INFO - Polling complete: 1 new messages saved
+2025-10-08 18:42:02 - inbox_intel - INFO - Fetching reservations for 2025-05-10
+2025-10-08 18:42:02 - inbox_intel - INFO - Found 1 reservations for 2025-05-10
+2025-10-08 18:42:02 - inbox_intel - INFO - Fetching reservations for 2025-05-10
+2025-10-08 18:42:02 - inbox_intel - INFO - Found 0 reservations for 2025-05-10
+2025-10-08 18:42:02 - inbox_intel - INFO - Generating daily summary for 2025-05-10
+2025-10-08 18:42:02 - inbox_intel - INFO - Fetching reservations for 2025-05-10
+2025-10-08 18:42:02 - inbox_intel - INFO - Found 1 reservations for 2025-05-10
+2025-10-08 18:42:02 - inbox_intel - INFO - Generating daily summary for 2025-05-10
+2025-10-08 18:42:02 - inbox_intel - INFO - Fetching reservations for 2025-05-10
+2025-10-08 18:42:02 - inbox_intel - INFO - Found 0 reservations for 2025-05-10
+2025-10-08 18:42:02 - inbox_intel - INFO - Generating daily summary for 2025-05-10
+2025-10-08 18:42:02 - inbox_intel - INFO - Fetching reservations for 2025-05-10
+2025-10-08 18:42:02 - inbox_intel - INFO - Found 1 reservations for 2025-05-10
+2025-10-08 18:42:02 - inbox_intel - INFO - Generating daily summary for 2025-10-08
+2025-10-08 18:42:02 - inbox_intel - INFO - Fetching reservations for 2025-10-08
+2025-10-08 18:42:02 - inbox_intel - INFO - Found 0 reservations for 2025-10-08
+2025-10-08 18:42:02 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-08 18:42:02 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-08 18:42:02 - inbox_intel - INFO - Scheduler started: polling every 5 minutes
+2025-10-08 18:42:02 - inbox_intel - INFO - Scheduler started: processing every 30 seconds
+2025-10-08 18:42:02 - inbox_intel - INFO - Scheduler stopped
+2025-10-08 18:42:02 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-08 18:42:02 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-08 18:42:02 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-08 18:42:02 - inbox_intel - INFO - Scheduler started: polling every 5 minutes
+2025-10-08 18:42:02 - inbox_intel - INFO - Scheduler started: processing every 30 seconds
+2025-10-08 18:42:02 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-08 18:42:02 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-08 18:42:02 - inbox_intel - INFO - Scheduler stopped
+2025-10-08 18:42:02 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-08 18:42:02 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-08 18:42:02 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-08 18:42:02 - inbox_intel - INFO - Scheduler started: polling every 5 minutes
+2025-10-08 18:42:02 - inbox_intel - INFO - Scheduler started: processing every 30 seconds
+2025-10-08 18:42:02 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-08 18:42:02 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-08 18:42:02 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-08 18:42:02 - inbox_intel - INFO - Duplicate message skipped: msg_abc123
+2025-10-08 18:42:02 - inbox_intel - INFO - Scheduler stopped
+2025-10-08 18:42:02 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-08 18:42:02 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-08 18:42:02 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-08 18:42:02 - inbox_intel - INFO - Scheduler started: polling every 5 minutes
+2025-10-08 18:42:02 - inbox_intel - INFO - Scheduler started: processing every 30 seconds
+2025-10-08 18:42:02 - inbox_intel - INFO - Received webhook: reservation.updated
+2025-10-08 18:42:02 - inbox_intel - WARNING - Unsupported event type: reservation.updated
+2025-10-08 18:42:02 - inbox_intel - INFO - Scheduler stopped
+2025-10-08 18:42:02 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-08 18:42:02 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-08 18:42:02 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-08 18:42:02 - inbox_intel - INFO - Scheduler started: polling every 5 minutes
+2025-10-08 18:42:02 - inbox_intel - INFO - Scheduler started: processing every 30 seconds
+2025-10-08 18:42:02 - inbox_intel - INFO - Scheduler stopped
+2025-10-08 18:42:02 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-08 18:42:02 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-08 18:42:02 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-08 18:42:02 - inbox_intel - INFO - Scheduler started: polling every 5 minutes
+2025-10-08 18:42:02 - inbox_intel - INFO - Scheduler started: processing every 30 seconds
+2025-10-08 18:42:02 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-08 18:42:02 - inbox_intel - ERROR - Message missing '_id' field
+2025-10-08 18:42:02 - inbox_intel - INFO - Scheduler stopped
+2025-10-08 18:42:02 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-08 18:42:02 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-08 18:42:02 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-08 18:42:02 - inbox_intel - INFO - Scheduler started: polling every 5 minutes
+2025-10-08 18:42:02 - inbox_intel - INFO - Scheduler started: processing every 30 seconds
+2025-10-08 18:42:02 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-08 18:42:02 - inbox_intel - WARNING - Message msg_abc123 has empty body
+2025-10-08 18:42:02 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-08 18:42:02 - inbox_intel - INFO - Scheduler stopped
+2025-10-08 18:42:02 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-08 18:42:02 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-08 18:42:02 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-08 18:42:02 - inbox_intel - INFO - Scheduler started: polling every 5 minutes
+2025-10-08 18:42:02 - inbox_intel - INFO - Scheduler started: processing every 30 seconds
+2025-10-08 18:42:02 - inbox_intel - INFO - Received webhook: reservation.messageSent
+2025-10-08 18:42:02 - inbox_intel - INFO - Saved new message: msg_sent_001
+2025-10-08 18:42:02 - inbox_intel - INFO - Scheduler stopped
+2025-10-08 18:42:02 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-08 18:42:02 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-08 18:42:02 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-08 18:42:02 - inbox_intel - INFO - Scheduler started: polling every 5 minutes
+2025-10-08 18:42:02 - inbox_intel - INFO - Scheduler started: processing every 30 seconds
+2025-10-08 18:42:02 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-08 18:42:02 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-08 18:42:02 - inbox_intel - INFO - Scheduler stopped
+2025-10-08 18:42:02 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-08 18:42:02 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-08 18:42:02 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-08 18:42:02 - inbox_intel - INFO - Scheduler started: polling every 5 minutes
+2025-10-08 18:42:02 - inbox_intel - INFO - Scheduler started: processing every 30 seconds
+2025-10-08 18:42:02 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-08 18:42:03 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-08 18:42:03 - inbox_intel - INFO - Scheduler stopped
+2025-10-08 18:42:03 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-08 18:42:03 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-08 18:42:03 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-08 18:42:03 - inbox_intel - INFO - Scheduler started: polling every 5 minutes
+2025-10-08 18:42:03 - inbox_intel - INFO - Scheduler started: processing every 30 seconds
+2025-10-08 18:42:03 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-08 18:42:03 - inbox_intel - ERROR - Failed to parse timestamp: Invalid isoformat string: 'invalid-timestamp'
+2025-10-08 18:42:03 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-08 18:42:03 - inbox_intel - INFO - Scheduler stopped
+2025-10-08 18:42:03 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-08 18:42:03 - inbox_intel - INFO - Starting InboxIntel application
+2025-10-08 18:42:03 - inbox_intel - INFO - Using existing engine (test mode)
+2025-10-08 18:42:03 - inbox_intel - INFO - Scheduler started: polling every 5 minutes
+2025-10-08 18:42:03 - inbox_intel - INFO - Scheduler started: processing every 30 seconds
+2025-10-08 18:42:03 - inbox_intel - INFO - Received webhook: reservation.messageReceived
+2025-10-08 18:42:03 - inbox_intel - INFO - Saved new message: msg_abc123
+2025-10-08 18:42:03 - inbox_intel - INFO - Scheduler stopped
+2025-10-08 18:42:03 - inbox_intel - INFO - Shutting down InboxIntel application
+2025-10-08 18:42:03 - inbox_intel.src.worker - INFO - Processing 1 unclassified messages
+2025-10-08 18:42:03 - inbox_intel.src.worker - INFO - Classified message msg_123: EARLY_CHECKIN (confidence: 0.95)
+2025-10-08 18:42:03 - inbox_intel.src.worker - WARNING - Failed to send alert for msg_123: Pushover credentials not configured
+2025-10-08 18:42:03 - inbox_intel.src.worker - INFO - Successfully processed 1 messages
+2025-10-08 18:42:03 - inbox_intel.src.worker - INFO - Processing 2 unclassified messages
+2025-10-08 18:42:03 - inbox_intel.src.worker - INFO - Classified message msg_1: EARLY_CHECKIN (confidence: 0.90)
+2025-10-08 18:42:03 - inbox_intel.src.worker - WARNING - Failed to send alert for msg_1: Pushover credentials not configured
+2025-10-08 18:42:03 - inbox_intel.src.worker - INFO - Classified message msg_2: MAINTENANCE_ISSUE (confidence: 0.98)
+2025-10-08 18:42:03 - inbox_intel.src.worker - WARNING - Failed to send alert for msg_2: Pushover credentials not configured
+2025-10-08 18:42:03 - inbox_intel.src.worker - INFO - Successfully processed 2 messages
+2025-10-08 18:42:03 - inbox_intel.src.worker - INFO - Processing 1 unclassified messages
+2025-10-08 18:42:03 - inbox_intel.src.worker - INFO - Classified message msg_unprocessed: SPECIAL_REQUEST (confidence: 0.88)
+2025-10-08 18:42:03 - inbox_intel.src.worker - WARNING - Failed to send alert for msg_unprocessed: Pushover credentials not configured
+2025-10-08 18:42:03 - inbox_intel.src.worker - INFO - Successfully processed 1 messages
+2025-10-08 18:42:03 - inbox_intel.src.worker - INFO - Processing 2 unclassified messages
+2025-10-08 18:42:03 - inbox_intel.src.worker - ERROR - Failed to classify message msg_1: LLM API error
+2025-10-08 18:42:03 - inbox_intel.src.worker - INFO - Classified message msg_2: GENERAL_QUESTION (confidence: 0.80)
+2025-10-08 18:42:03 - inbox_intel.src.worker - INFO - Successfully processed 1 messages
+2025-10-08 18:42:03 - inbox_intel.src.worker - INFO - Processing 1 unclassified messages
+2025-10-08 18:42:03 - inbox_intel.src.worker - ERROR - Failed to classify message msg_fail: Classification failed
+2025-10-08 18:42:03 - inbox_intel.src.worker - INFO - Successfully processed 0 messages
+2025-10-08 18:42:03 - inbox_intel.src.worker - INFO - Processing 1 unclassified messages
+2025-10-08 18:42:03 - inbox_intel.src.worker - INFO - Classified message msg_alert: EARLY_CHECKIN (confidence: 0.95)
+2025-10-08 18:42:03 - inbox_intel.src.worker - INFO - Alert sent for message msg_alert
+2025-10-08 18:42:03 - inbox_intel.src.worker - INFO - Successfully processed 1 messages
+2025-10-08 18:42:03 - inbox_intel.src.worker - INFO - Processing 1 unclassified messages
+2025-10-08 18:42:03 - inbox_intel.src.worker - INFO - Classified message msg_no_alert: GENERAL_QUESTION (confidence: 0.92)
+2025-10-08 18:42:03 - inbox_intel.src.worker - INFO - Successfully processed 1 messages
+2025-10-08 18:42:03 - inbox_intel.src.worker - INFO - Processing 1 unclassified messages
+2025-10-08 18:42:03 - inbox_intel.src.worker - INFO - Classified message msg_low_conf: EARLY_CHECKIN (confidence: 0.65)
+2025-10-08 18:42:03 - inbox_intel.src.worker - INFO - Successfully processed 1 messages
+2025-10-08 18:42:03 - inbox_intel.src.worker - INFO - Processing 1 unclassified messages
+2025-10-08 18:42:03 - inbox_intel.src.worker - INFO - Classified message msg_alert_fail: EARLY_CHECKIN (confidence: 0.95)
+2025-10-08 18:42:03 - inbox_intel.src.worker - WARNING - Failed to send alert for msg_alert_fail: API error
+2025-10-08 18:42:03 - inbox_intel.src.worker - INFO - Successfully processed 1 messages
+2025-10-08 18:42:03 - inbox_intel.src.worker - INFO - Alert sent for message msg_123
+2025-10-08 18:42:03 - inbox_intel.src.worker - INFO - Alert sent for message msg_456
+2025-10-08 18:42:03 - inbox_intel.src.worker - WARNING - Failed to send alert for msg_789: Failed to send

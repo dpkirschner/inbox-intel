@@ -115,3 +115,29 @@ class GuestyClient:
         """
         params = {"limit": limit, "skip": skip}
         return self._make_request("GET", "listings", params=params)
+
+    def get_reservations(
+        self,
+        checkin_from: str | None = None,
+        checkin_to: str | None = None,
+        limit: int = 100,
+    ) -> dict[str, Any]:
+        """
+        Fetch reservations from Guesty.
+
+        Args:
+            checkin_from: ISO format datetime for check-in start filter
+            checkin_to: ISO format datetime for check-in end filter
+            limit: Maximum number of results to return
+
+        Returns:
+            API response with reservations data
+        """
+        params: dict[str, Any] = {"limit": limit}
+
+        if checkin_from:
+            params["checkInDateFrom"] = checkin_from
+        if checkin_to:
+            params["checkInDateTo"] = checkin_to
+
+        return self._make_request("GET", "reservations-v2", params=params)
