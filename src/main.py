@@ -13,7 +13,9 @@ from sqlalchemy.orm import Session
 from .config import config
 from .database import get_engine, get_session, init_database, save_message_from_webhook
 from .logger import logger
+from .notifications import send_daily_summary
 from .polling import fetch_and_save_messages
+from .reporter import generate_daily_summary
 from .worker import process_unclassified_messages
 
 # Global engine instance
@@ -52,6 +54,18 @@ def get_db() -> Iterator[Session]:
         session.close()
 
 
+def _generate_and_log_daily_summary() -> None:
+    """Wrapper function to generate, log, and send daily summary."""
+    try:
+        logger.info("Generating daily summary report")
+        summary = generate_daily_summary()
+        logger.info(f"Daily Summary:\n{summary}")
+
+        send_daily_summary(summary)
+    except Exception as e:
+        logger.error(f"Failed to generate or send daily summary: {e}")
+
+
 @asynccontextmanager
 async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     """Application lifespan manager."""
@@ -82,11 +96,21 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
         name="Process unclassified messages",
         replace_existing=True,
     )
+    _scheduler.add_job(
+        _generate_and_log_daily_summary,
+        trigger="cron",
+        hour=config.REPORT_HOUR,
+        minute=0,
+        id="daily_summary",
+        name="Generate daily summary report",
+        replace_existing=True,
+    )
     _scheduler.start()
     logger.info(f"Scheduler started: polling every {config.POLLING_INTERVAL_MINUTES} minutes")
     logger.info(
         f"Scheduler started: processing every {config.PROCESSING_INTERVAL_SECONDS} seconds"
     )
+    logger.info(f"Scheduler started: daily summary at {config.REPORT_HOUR}:00")
 
     yield
 

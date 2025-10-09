@@ -5,7 +5,13 @@ from unittest.mock import Mock, patch
 import pytest
 import requests
 
-from src.notifications import PushoverError, render_template, send_pushover_alert
+from src.notifications import (
+    PushoverError,
+    _send_slack_message,
+    render_template,
+    send_daily_summary,
+    send_pushover_alert,
+)
 
 
 @pytest.fixture
@@ -172,3 +178,134 @@ class TestRenderTemplate:
         """Test rendering non-existent template raises error."""
         with pytest.raises(FileNotFoundError, match="Template not found"):
             render_template("INVALID_CATEGORY")
+
+
+class TestSendDailySummary:
+    """Tests for send_daily_summary function."""
+
+    @patch("src.notifications.send_pushover_alert")
+    def test_send_daily_summary_via_pushover(self, mock_pushover):
+        """Test sending daily summary via Pushover when configured."""
+        with patch("src.notifications.config") as mock_cfg:
+            mock_cfg.PUSHOVER_TOKEN = "test_token"
+            mock_cfg.PUSHOVER_USER = "test_user"
+            mock_cfg.SLACK_WEBHOOK_URL = ""
+            mock_cfg.EMAIL_FROM = ""
+            mock_cfg.EMAIL_TO = ""
+
+            summary = "📅 **Daily Summary**\n- Test arrival"
+            send_daily_summary(summary)
+
+            mock_pushover.assert_called_once_with(
+                "📅 Daily Arrival Summary",
+                summary,
+                priority=0,
+            )
+
+    @patch("src.notifications._send_slack_message")
+    def test_send_daily_summary_via_slack(self, mock_slack):
+        """Test sending daily summary via Slack when configured."""
+        with patch("src.notifications.config") as mock_cfg:
+            mock_cfg.PUSHOVER_TOKEN = ""
+            mock_cfg.PUSHOVER_USER = ""
+            mock_cfg.SLACK_WEBHOOK_URL = "https://hooks.slack.com/test"
+            mock_cfg.EMAIL_FROM = ""
+            mock_cfg.EMAIL_TO = ""
+
+            summary = "📅 **Daily Summary**\n- Test arrival"
+            send_daily_summary(summary)
+
+            mock_slack.assert_called_once_with(
+                "📅 Daily Arrival Summary",
+                summary,
+            )
+
+    @patch("src.notifications.send_pushover_alert")
+    @patch("src.notifications._send_slack_message")
+    def test_send_daily_summary_multiple_channels(self, mock_slack, mock_pushover):
+        """Test sending daily summary via multiple channels."""
+        with patch("src.notifications.config") as mock_cfg:
+            mock_cfg.PUSHOVER_TOKEN = "test_token"
+            mock_cfg.PUSHOVER_USER = "test_user"
+            mock_cfg.SLACK_WEBHOOK_URL = "https://hooks.slack.com/test"
+            mock_cfg.EMAIL_FROM = ""
+            mock_cfg.EMAIL_TO = ""
+
+            summary = "📅 **Daily Summary**\n- Test arrival"
+            send_daily_summary(summary)
+
+            mock_pushover.assert_called_once()
+            mock_slack.assert_called_once()
+
+    @patch("src.notifications.send_pushover_alert")
+    def test_send_daily_summary_pushover_error_raises(self, mock_pushover):
+        """Test that Pushover errors are raised."""
+        with patch("src.notifications.config") as mock_cfg:
+            mock_cfg.PUSHOVER_TOKEN = "test_token"
+            mock_cfg.PUSHOVER_USER = "test_user"
+            mock_cfg.SLACK_WEBHOOK_URL = ""
+            mock_cfg.EMAIL_FROM = ""
+            mock_cfg.EMAIL_TO = ""
+
+            mock_pushover.side_effect = PushoverError("API error")
+
+            with pytest.raises(PushoverError):
+                send_daily_summary("Test summary")
+
+    @patch("src.notifications._send_slack_message")
+    def test_send_daily_summary_slack_error_logged(self, mock_slack):
+        """Test that Slack errors are logged but don't raise."""
+        with patch("src.notifications.config") as mock_cfg:
+            mock_cfg.PUSHOVER_TOKEN = ""
+            mock_cfg.PUSHOVER_USER = ""
+            mock_cfg.SLACK_WEBHOOK_URL = "https://hooks.slack.com/test"
+            mock_cfg.EMAIL_FROM = ""
+            mock_cfg.EMAIL_TO = ""
+
+            mock_slack.side_effect = Exception("Slack error")
+
+            send_daily_summary("Test summary")
+
+
+class TestSendSlackMessage:
+    """Tests for _send_slack_message function."""
+
+    def test_send_slack_message_success(self):
+        """Test successful Slack message send."""
+        with patch("src.notifications.config") as mock_cfg:
+            mock_cfg.SLACK_WEBHOOK_URL = "https://hooks.slack.com/test"
+
+            with patch("src.notifications.requests.post") as mock_post:
+                mock_resp = Mock()
+                mock_resp.status_code = 200
+                mock_post.return_value = mock_resp
+
+                _send_slack_message("Test Title", "Test Message")
+
+                mock_post.assert_called_once_with(
+                    "https://hooks.slack.com/test",
+                    json={
+                        "text": "*Test Title*\n\nTest Message",
+                        "mrkdwn": True,
+                    },
+                    timeout=10,
+                )
+
+    def test_send_slack_message_no_webhook_configured(self):
+        """Test that error is raised when webhook not configured."""
+        with patch("src.notifications.config") as mock_cfg:
+            mock_cfg.SLACK_WEBHOOK_URL = ""
+
+            with pytest.raises(ValueError, match="Slack webhook URL not configured"):
+                _send_slack_message("Test", "Test")
+
+    def test_send_slack_message_http_error(self):
+        """Test handling of HTTP errors."""
+        with patch("src.notifications.config") as mock_cfg:
+            mock_cfg.SLACK_WEBHOOK_URL = "https://hooks.slack.com/test"
+
+            with patch("src.notifications.requests.post") as mock_post:
+                mock_post.side_effect = requests.exceptions.HTTPError("HTTP error")
+
+                with pytest.raises(requests.exceptions.HTTPError):
+                    _send_slack_message("Test", "Test")
